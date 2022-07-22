@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('cooperativas', function (Blueprint $table) {
             $table->id();
+            $table->boolean('estado');
             $table->string('nom_coop');
             $table->foreignId('id_dueño')->constrained('personas');
            // $table->timestamps();

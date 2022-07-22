@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class parada extends Model
+class buses extends Model
 {
     use HasFactory;
-    protected $table= 'paradas';
+    protected $table= 'buses';
     public $timestamps =false;
-     public $fillable = ['nom_parada','estado'];
+     public $fillable = ['matricula','modelo','estado','capacidad','id_chofer','id_coop','id_ruta'];
 }

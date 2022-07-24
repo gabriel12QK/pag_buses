@@ -3,41 +3,40 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\parada;
+use App\Models\tipo;
 
-class Paradasb extends Component
+class Tipob extends Component
 {
-    public $nom_parada;
+    public $tipo;
     public $button=true;
 
     public function render()
     {
-        $p=parada::where('estado',1)->get();
-       return view('livewire.paradasb',compact('p'));
+        return view('livewire.tipob');
     }
 
     public function guardar()
     {
-        parada::create([
-            'nom_parada' => $this->nom_parada,
+        tipo::create([
+            'tipo' => $this->tipo,
             'estado'=>1,
         ]);
         $this->reset();
     }
 
     public function edit($id){
-        $parada = parada::find($id);
+        $tipo =tipo::find($id);
         $this->_id = $id;
-        $this->nom_parada=$parada->nom_parada;
+        $this->tipo=$tipo->tipo;
         $this->button = false;
 
     }
 
     public function update(){
        // $this->validate();
-       $parada = parada::find( $this->_id);
-        $parada->update([
-            'nom_parada' => $this->nom_parada,      
+       $tipo =tipo::find( $this->_id);
+        $tipo->update([
+            'tipo' => $this->tipo,      
             'estado' => 1,
         ]);
         $this->reset();
@@ -46,8 +45,8 @@ class Paradasb extends Component
 
     public function destroyL($id){
         
-        $parada = parada::find($id);
-        $parada->update([
+        $tipo =tipo::find($id);
+        $tipo->update([
             'estado' => 0
         ]);
         $this->reset();

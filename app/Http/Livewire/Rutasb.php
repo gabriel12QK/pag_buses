@@ -19,19 +19,18 @@ class Rutasb extends Component
             'nom_ruta' => $this->nom_ruta,
             'inicio'=>$this->inicio,
             'fin'=> $this->fin,
-           
-           // 'id_parada'=>$_POST['id_parada'],   
+            
+            'id_parada'=>$_POST['id_parada'],   
             'estado'=>1,
         ]);
-        $id_parada = $this->id_parada->getAllPermissions()->pluck('id')->toArray();
-        foreach($id_parada as $id_parada) {
-        $this->id_parada[$id_parada] = $id_parada;
-        }
-       
-        //     if (is_array($_POST['id_parada']))
-        //     {
-        //       $this->id_parada=$this->id_parada;
-        //     } 
+        // $id_parada = $this->id_parada->getAllPermissions()->pluck('id')->toArray();
+        // foreach($id_parada as $id_parada) {
+        // $this->id_parada[$id_parada] = $id_parada;
+        // }
+            // if (is_array($_POST['id_parada']))
+            // {
+            //   $t->id_parada=$this->id_parada;
+            // } 
 
         $this->reset();
     }

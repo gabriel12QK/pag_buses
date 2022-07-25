@@ -40,6 +40,6 @@ class RutaController extends Controller
     public function showR()
     {
        
-      return view('paginas.rutas');
+      return view('paginas.ruta');
     }
 }

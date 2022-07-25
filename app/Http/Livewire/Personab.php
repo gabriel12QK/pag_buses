@@ -15,10 +15,11 @@ class Personab extends Component
 
         $p=DB::table('personas')
         ->join('tipos','personas.id_tipo','=','tipos.id')
-        ->select('personas.*','tipo.*')
+        ->select('personas.*','tipos.*')
         //->where( 'personas.CI', 'like', '%'.$this->buscar.'%')
         -> where('personas.estado',1)->get();
-        return view('livewire.personab', compact('p'));
+        $t=tipo::where('estado',1)->get();
+        return view('livewire.personab', compact('p','t'));
     }
 
     public function guardar()

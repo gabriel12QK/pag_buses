@@ -14,8 +14,8 @@ class Busesb extends Component
     public $button=true;
     public $buscar;
     //paginacion y busqueda
-    use WithPagination;
-    protected $paginationTheme = 'bootstrap';
+ //   use WithPagination;
+   // protected $paginationTheme = 'bootstrap';
   //  protected $queryString = ['buscar'];
 
     public function render()
@@ -25,14 +25,14 @@ class Busesb extends Component
         ->join('rutas','buses.id_ruta','=', 'rutas.id')
         ->join('cooperativas','buses.id_coop','=', 'cooperativas.id')
        // ->join('persona','buses.id_chofer','=', 'personas.id')
-        ->select('buses.*','rutas.nom.ruta as ruta',/*'persona.nom',*/'cooperativas.nom_coop as coop')
+        ->select('buses.*','rutas.nom_ruta as ruta',/*'persona.nom',*/'cooperativas.nom_coop as coop')
         //->where( 'nom', 'like', '%'.$this->buscar.'%')
-        -> where('datospersona.estado',1)
-        ->paginate(5);
+        -> where('buses.estado',1)->get();
+        //->paginate(5);
         //para los selects uso eloquent
         $coop=cooperativa::where('estado',1)->get();
         $ruta=ruta::where('estado',1)->get();
-        $chofer=chofer::where('estado',1)->get();
+        $chofer=persona::where('estado',1)->get();
 
         return view('livewire.busesb',compact('coop','ruta','chofer'));
     }

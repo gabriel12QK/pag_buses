@@ -12,7 +12,7 @@ class Paradasb extends Component
 
     public function render()
     {
-        $p=parada::where('estado',1)->get();
+        $p=parada::all();
        return view('livewire.paradasb',compact('p'));
     }
 
@@ -22,6 +22,7 @@ class Paradasb extends Component
             'nom_parada' => $this->nom_parada,
             'estado'=>1,
         ]);
+        dd();
         $this->reset();
     }
 

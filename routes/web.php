@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RutaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route:: get('tipo_usuario',[RutaController:: class, 'showT']);
+Route:: get('persona',[RutaController:: class, 'showPer']);
+Route:: get('buses',[RutaController:: class, 'showB']);
+Route:: get('cooperativa',[RutaController:: class, 'showC']);
+Route:: get('paradas',[RutaController:: class, 'showPar']);
+Route:: get('rutas',[RutaController:: class, 'showR']);

@@ -42,4 +42,10 @@ class RutaController extends Controller
        
       return view('paginas.ruta');
     }
+    //pagina PaginaPrincipalInfo
+    public function showPP()
+    {
+       
+      return view('paginas.principal');
+    }
 }

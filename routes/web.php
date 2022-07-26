@@ -22,3 +22,4 @@ Route:: get('buses',[RutaController:: class, 'showB']);
 Route:: get('cooperativa',[RutaController:: class, 'showC']);
 Route:: get('paradas',[RutaController:: class, 'showPar']);
 Route:: get('rutas',[RutaController:: class, 'showR']);
+Route:: get('principal',[RutaController:: class, 'showPP']);

@@ -27,30 +27,30 @@
                             class="side-menu__label">Dashboard</span></a>
                 </li>
                 <li class="sub-category">
-                    <h3>UI Kit</h3>
+                    <h3>Usuario Final</h3>
                 </li>
 
                 <li>
-                    <a class="side-menu__item has-link" href="landing-page.html" target="_blank"><i
+                    <a class="side-menu__item has-link" href="{{url('principal')}}" ><i
                             class="side-menu__icon fe fe-zap"></i><span
-                            class="side-menu__label">Landing Page</span><span class="badge bg-green br-5 side-badge blink-text pb-1">New</span></a>
+                            class="side-menu__label">Pagina Principal</span><span class="badge bg-green br-5 side-badge blink-text pb-1">UF</span></a>
                 </li>
                 <li class="sub-category">
-                    <h3>Pre-build Pages</h3>
+                    <h3>Sistema de Gestion</h3>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
                             class="side-menu__icon fe fe-layers"></i><span
-                            class="side-menu__label">Pages</span><i
+                            class="side-menu__label">Pages<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
                             class="angle fe fe-chevron-right"></i></a>
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
-                        <li><a href="{{url('buses')}}" class="slide-item"> Buses</a></li>
-                        <li><a href="{{url('cooperativa')}}" class="slide-item"> Cooperativa</a></li>
-                        <li><a href="{{url('tipo_usuario')}}" class="slide-item"> Tipo </a></li>
-                        <li><a href="{{url('persona')}}" class="slide-item"> Usuario</a></li>
-                        <li><a href="{{url('paradas')}}" class="slide-item"> Paradas</a></li>
-                        <li><a href="{{url('rutas')}}" class="slide-item"> Rutas</a></li>
+                        <li><a href="{{url('buses')}}" class="slide-item"> Buses<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('cooperativa')}}" class="slide-item"> Cooperativa<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('tipo_usuario')}}" class="slide-item"> Tipo<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span> </a></li>
+                        <li><a href="{{url('persona')}}" class="slide-item"> Usuario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('paradas')}}" class="slide-item"> Paradas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('rutas')}}" class="slide-item"> Rutas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                     </ul>
                 </li>
                 

@@ -1,6 +1,6 @@
 @extends('layaouts.app')
 @section('header-title')
-Busca Tu ruta preferida
+Pagina para usuario final
 @endsection
 @section('contenido')
 <livewire:pageprincipal/>

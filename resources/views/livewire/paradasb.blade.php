@@ -7,11 +7,10 @@
             </div>
             <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">Paradas</label>
+                            <label for="exampleInputEmail1" class="form-label">nombre de parada</label>
                             <input type="text" class="form-control" wire:model="nom_parada" >
                         </div>
-                      
-                    <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>
+                      <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>
             </div>
         </div>
     </form>

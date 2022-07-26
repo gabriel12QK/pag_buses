@@ -25,11 +25,12 @@
                         <div class="form-group">
                             <div class="form-floating floating-label">
                                 <select class="form-control form-select select2" data-bs-placeholder="Select">
-                                   @foreach ($t as $item2)
-                                   <option >{{$item->tipo}}</option>
+                                    <option >Tipo de Usuario</option>
+                                    @foreach ($t as $item2)
+                                   <option >{{$item2->tipo}}</option>
                                    @endforeach
                                 </select>
-                                <label for="floatingPassword">conductor</label>
+                            
                             </div>
                         </div>
                     <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>

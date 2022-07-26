@@ -36,19 +36,8 @@
                         </div>
                         
                         
-                                <div class="form-group m-0">
-                                    <div class="form-label">Checkboxes</div>
-                                    <div class="custom-controls-stacked">
-                                        @foreach ($p as $item)
-                                        <label class="custom-control custom-checkbox">
-                                           
-                                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked>
-                                            <span class="custom-control-label">{{$item->nom_parada}}</span>
-                                           
-                                                
-                                            </label>
-                                        @endforeach
-                                    </div>
+                                <div class="form-group m-0 justify-content-center">
+                                    <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Small Modal</button>
                                 </div>
                        
                        
@@ -57,5 +46,39 @@
             </div>
         </div>
     </form>
+    </div>
+
+    {{-- MODAL PARA PARADAS --}}
+
+    <div class="modal  fade" id="smallmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Paradas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-controls-stacked">
+                        @foreach ($p as $item)
+                        <label class="custom-control custom-checkbox">
+                           
+                            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" >
+                            <span class="custom-control-label">{{$item->nom_parada}}</span>
+                           
+                                
+                            </label>
+                        @endforeach
+                       
+                    </div>
+                    {{-- <p>Modal body text goes here.</p> --}}
+                </div>
+                {{-- <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div> --}}
+            </div>
+        </div>
     </div>
 </div>

@@ -3,5 +3,5 @@
 Bienvenidos a la pagina de Paradas
 @endsection
 @section('contenido')
-@include('livewire.paradasb')
+<livewire:paradasb/>
 @endsection

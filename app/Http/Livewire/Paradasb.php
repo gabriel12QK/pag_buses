@@ -18,11 +18,11 @@ class Paradasb extends Component
 
     public function guardar()
     {
+       
         parada::create([
             'nom_parada' => $this->nom_parada,
             'estado'=>1,
         ]);
-        dd();
         $this->reset();
     }
 

@@ -17,12 +17,12 @@
                 <!-- SEARCH -->
                 
                              <!-- Theme-Layout -->
-                            <div class="d-flex country">
+                            {{-- <div class="d-flex country">
                                 <a class="nav-link icon theme-layout nav-link-bg layout-setting">
                                     <span class="dark-layout"><i class="fe fe-moon"></i></span>
                                     <span class="light-layout"><i class="fe fe-sun"></i></span>
                                 </a>
-                            </div>
+                            </div> --}}
                             <!-- Theme-Layout -->
 
                            <!-- FULL-SCREEN -->

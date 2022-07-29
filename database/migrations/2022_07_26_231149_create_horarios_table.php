@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('ruta_paradas', function (Blueprint $table) {
-        //    $table->foreignId('id_parada')->constrained('paradas');
-        //    $table->foreignId('id_ruta')->constrained('rutas');
-
-            
-        //    // $table->timestamps();
-        // });  //
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
+            $table->timeTz('frecuencia', $precision = 0);
+            $table->foreignId('id_parada')->constrained('paradas');
+            $table->foreignId('id_bus')->constrained('buses');
+           // $table->timestamps();
+        });
     }
 
     /**
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('horarios');
     }
 };

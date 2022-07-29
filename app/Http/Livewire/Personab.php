@@ -10,9 +10,36 @@ use Livewire\Component;
 
 class Personab extends Component
 {
+    public $nom,$ape,$CI,$telf,$id_tipo;
+
+    protected $rules = [
+        'nom' => 'required',
+        'ape' => 'required',
+        'CI' => 'required|min:10|numeric',
+        'telf' => 'required|min:10|numeric',
+        'id_tipo' => 'required',
+    ];
+    protected $messages = [
+        'nom.required' => 'campo requerido',
+        'ape.required' => 'campo requerido',
+        'CI.required' => 'campo requerido',
+        'CI.min' => 'minimo 10 caracteres',
+        'CI.numeric' => 'solo se permiten numeros',
+        'telf.required' => 'campo requerido',
+        'telf.min' => 'minimo 10 caracteres',
+        'telf.numeric' => 'solo se permiten numeros',
+        'id_tipo.required' => 'campo requerido',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+
     public function render()
     {
-
+        
         $p=DB::table('personas')
         ->join('tipos','personas.id_tipo','=','tipos.id')
         ->select('personas.*','tipos.*')
@@ -24,6 +51,7 @@ class Personab extends Component
 
     public function guardar()
     {
+        $this->validate();
         persona::create([
             'nom' => $this->nom,
             'ape'=> $this->ape,

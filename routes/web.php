@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RutaController;
+use App\Http\Livewire\Pageprincipal;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +23,6 @@ Route:: get('buses',[RutaController:: class, 'showB']);
 Route:: get('cooperativa',[RutaController:: class, 'showC']);
 Route:: get('paradas',[RutaController:: class, 'showPar']);
 Route:: get('rutas',[RutaController:: class, 'showR']);
+Route:: get('Reg-horario',[RutaController:: class, 'showH']);
 Route:: get('principal',[RutaController:: class, 'showPP']);
+Route:: get('ruta-paradas{ruta}',[Pageprincipal:: class, 'rutas']);

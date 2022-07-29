@@ -4,10 +4,28 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
+//query builder
+use Illuminate\Support\Facades\DB;
 class Pageprincipal extends Component
 {
+    public $ruta;
     public function render()
     {
-        return view('livewire.pageprincipal');
+        $r=DB::table('rutas')
+        ->where('rutas.estado',1)
+        ->get();
+        return view('livewire.pageprincipal', compact('r'));
+    }
+
+    public function rutas($ruta)
+    {
+       
+        $p=DB::table('rutas')
+        ->join('buses','rutas.id','=','buses.id_ruta')
+        ->join('horarios','buses.id','=','horarios.id_bus')
+        ->join('paradas','horarios.id_parada','=','paradas.id')
+        ->select('rutas.*', 'paradas.*','horarios.*')
+        ->where('rutas.nom_ruta',$ruta)->get();
+        return view('livewire.rutas-p', compact('p'));
     }
 }

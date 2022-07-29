@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->boolean('estado');
             $table->string('nom_parada');
-            
-           // $table->timestamps();
+           
+          // $table->timestamps();
         });
     }
 

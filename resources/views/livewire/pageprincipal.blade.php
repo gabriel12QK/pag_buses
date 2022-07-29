@@ -26,9 +26,62 @@
             </div>
         </div>
 
-        
+        <div class="row">
+            <h5 class="fw-semibold mb-4">Rutas</h5>
+            @foreach ($r as $item)
+            <div class="col-xl-3 col-md-6">
+                <div class="card">
+                    <span class="ribbone-success-left">
+                        <span><i class="fe fe-zap"></i></span>
+                    </span>
+                    <div class="card-body  p-6">
+                        <h6 class="card-subtitle mb-2 text-dark fw-bold text-end"  >{{$item->nom_ruta}}</h6>
+                        <input type="text" wire:model="ruta">
+                        <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a>
+                        <p class="card-text">Some quick example text to build on the card title. Some quick example text to build on the card title</p>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            
+           
+        </div>
 
-
+      
+        {{-- <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">KeyTable integration Autofill</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="key-table" class="table table-bordered text-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Ruta</th>
+                                      
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  @foreach ($r as $item)
+                                  <tr>
+                                      <td>{{$item->nom_ruta}}</td>
+                                      <td>{{$item->inicio}}</td>
+                                      <td>{{$item->fin}}</td>
+                                </tr>
+                                  @endforeach
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ --}}
 
 
 

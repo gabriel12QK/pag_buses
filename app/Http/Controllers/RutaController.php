@@ -48,4 +48,9 @@ class RutaController extends Controller
        
       return view('paginas.principal');
     }
+    public function showH()
+    {
+       
+      return view('paginas.horario');
+    }
 }

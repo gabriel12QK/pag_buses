@@ -542,6 +542,9 @@
 
     <!-- SPARKLINE JS-->
     <script src="../assets/js/jquery.sparkline.min.js"></script>
+  
+    <!-- SIDE-MENU JS -->
+    <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
 
     <!-- Sticky js -->
     <script src="../assets/js/sticky.js"></script>
@@ -561,6 +564,16 @@
     <script src="../assets/plugins/p-scroll/pscroll.js"></script>
     <script src="../assets/plugins/p-scroll/pscroll-1.js"></script>
 
+        <!-- INTERNAL Autofill-Table JS -->
+        <script src="../assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/plugins/datatable/js/dataTables.bootstrap5.js"></script>
+        <script src="../assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+        <script src="../assets/plugins/datatable/js/buttons.bootstrap5.min.js"></script>
+        <script src="../assets/plugins/extension-datatable/autofill/dataTables.autoFill.min.js"></script>
+        <script src="../assets/plugins/extension-datatable/autofill/autoFill.bootstrap5.min.js"></script>
+        <script src="../assets/plugins/extension-datatable/keytable/dataTables.keyTable.min.js"></script>
+        <script src="../assets/js/autofill-table.js"></script>
+
     <!-- INTERNAL CHARTJS CHART JS-->
     <script src="../assets/plugins/chart/Chart.bundle.js"></script>
     <script src="../assets/plugins/chart/rounded-barchart.js"></script>
@@ -568,11 +581,20 @@
 
     <!-- INTERNAL SELECT2 JS -->
     <script src="../assets/plugins/select2/select2.full.min.js"></script>
+    {{-- <script src="../assets/plugins/select2/select2.full.min.js"></script> --}}
+    <script src="../assets/js/select2.js"></script>
 
     <!-- INTERNAL Data tables js-->
     <script src="../assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
     <script src="../assets/plugins/datatable/js/dataTables.bootstrap5.js"></script>
     <script src="../assets/plugins/datatable/dataTables.responsive.min.js"></script>
+
+    <!-- INTERNAL Bootstrap-Datepicker js-->
+    <script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+    <!-- TIMEPICKER JS -->
+    <script src="../assets/plugins/time-picker/jquery.timepicker.js"></script>
+    <script src="../assets/plugins/time-picker/toggles.min.js"></script>
 
     <!-- INTERNAL APEXCHART JS -->
     <script src="../assets/js/apexcharts.js"></script>

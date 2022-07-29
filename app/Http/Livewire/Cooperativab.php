@@ -10,19 +10,15 @@ use Illuminate\Support\Facades\DB;
 class Cooperativab extends Component
 {
 
-    public $nom_coop;
+    public $nom_coop, $id_dueño, $cedula;
     public $button=true;
 
     public function render()
     {
 
-        $coop=DB::table('cooperativas')
-        ->join('personas','cooperativas.id_dueño','=','personas.id')
-        ->select('cooperativas.*','personas.*')
-        //->where( 'personas.CI', 'like', '%'.$this->buscar.'%')
-        -> where('cooperativas.estado',1)->get();
-       // $p=persona::where('esatdo',1)->get();
-        return view('livewire.cooperativab', compact('coop'));
+        $p=persona::where('personas.id_tipo',1)->get();
+       
+        return view('livewire.cooperativab', compact('p'));
     }
     
     public function guardar()
@@ -30,7 +26,6 @@ class Cooperativab extends Component
         cooperativa::create([
             'nom_coop' => $this->nom_coop,
             'id_dueño'=> $this->id_dueño,
-
             'estado'=>1,
         ]);
         $this->reset();
@@ -64,6 +59,14 @@ class Cooperativab extends Component
             'estado' => 0
         ]);
         $this->reset();
+    }
+
+    public function buscar($cedula){
+        $coop=DB::table('cooperativas')
+        ->join('personas','cooperativas.id_dueño','=','personas.id')
+        ->join('tipos','personas.id_tipo','=','tipos.id')
+        ->select('cooperativas.*','personas.*')
+        -> where('personas.CI',$cedula)->get();
     }
 
 }

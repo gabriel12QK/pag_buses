@@ -2,7 +2,7 @@
     <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
     <div class="app-sidebar">
         <div class="side-header">
-            <a class="header-brand1" href="index.html">
+            <a class="header-brand1" href="{{url('principal')}}">
                 <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
                 <img src="../assets/images/brand/logo-1.png" class="header-brand-img toggle-logo"
                     alt="logo">
@@ -51,6 +51,7 @@
                         <li><a href="{{url('persona')}}" class="slide-item"> Usuario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('paradas')}}" class="slide-item"> Paradas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('rutas')}}" class="slide-item"> Rutas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('Reg-horario')}}" class="slide-item"> Horario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                     </ul>
                 </li>
                 

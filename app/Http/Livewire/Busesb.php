@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class Busesb extends Component
 {
-    public $mat, $modelo, $capacidad, $id_chofer, $id_coop, $id_ruta;
+    public $matricula, $modelo, $capacidad, $id_chofer, $id_coop, $id_ruta;
     public $button=true;
     public $buscar;
     //paginacion y busqueda
@@ -24,15 +24,15 @@ class Busesb extends Component
         $bus=DB::table('buses')
         ->join('rutas','buses.id_ruta','=', 'rutas.id')
         ->join('cooperativas','buses.id_coop','=', 'cooperativas.id')
-       // ->join('persona','buses.id_chofer','=', 'personas.id')
-        ->select('buses.*','rutas.nom_ruta as ruta',/*'persona.nom',*/'cooperativas.nom_coop as coop')
+        ->join('personas','buses.id_chofer','=', 'personas.id')
+        ->select('buses.*','rutas.nom_ruta as ruta','personas.nom','cooperativas.nom_coop as coop')
         //->where( 'nom', 'like', '%'.$this->buscar.'%')
         -> where('buses.estado',1)->get();
         //->paginate(5);
         //para los selects uso eloquent
         $coop=cooperativa::where('estado',1)->get();
         $ruta=ruta::where('estado',1)->get();
-        $chofer=persona::where('estado',1)->get();
+        $chofer=persona::where('personas.id_tipo',2)->get();
 
         return view('livewire.busesb',compact('coop','ruta','chofer'));
     }
@@ -40,7 +40,7 @@ class Busesb extends Component
 
    public function guardar(){
     buses::create([
-        'matricula' => $this->mat,
+        'matricula' => $this->matricula,
         'modelo'=>$this->modelo,
         'capacidad'=> $this->capacidad, 
         'estado'=>1,

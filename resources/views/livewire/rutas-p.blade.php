@@ -38,7 +38,6 @@ Bienvenidos a la pagina de buses
     {{-- derecha horario --}}
   
     <div class="col-md-6">
-        {{$item->nom_ruta}}
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Horario</h3>
@@ -54,12 +53,45 @@ Bienvenidos a la pagina de buses
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td>Lunes</td>
-                                    <td>{{$item->inicio}}</td>
-                                    <td>{{$item->fin}}</td>
-                                </tr>     
-                                <tr>
+                                    @foreach ($p as $item)
+                                    <tr>
+                                        <td>Lunes</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Martes</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Miercoles</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Jueves</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Viernes</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Sabado</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>       
+                                    <tr>
+                                        <td>Domingo</td>
+                                        <td>{{$item->inicio}}</td>
+                                        <td>{{$item->fin}}</td>
+                                    </tr>    
+                                    @endforeach
+                                  
+                                {{-- <tr>
                                     <td>Martes</td>
                                     <td>{{$item->inicio}}</td>
                                     <td>{{$item->fin}}</td>
@@ -78,7 +110,7 @@ Bienvenidos a la pagina de buses
                                     <td>Viernes</td>
                                     <td>{{$item->inicio}}</td>
                                     <td>{{$item->fin}}</td>
-                                </tr>       
+                                </tr>        --}}
                                 </tbody>
                             </table>
                         </div>

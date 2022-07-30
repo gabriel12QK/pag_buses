@@ -10,15 +10,11 @@
                     Bienvenid@ a la forma mas facil y rapida de consultar los horarios
                     y paradas de los buses urbanos de la cuidad de calceta
                     </h4>
-
-                    <a href="https://themeforest.net/item/sash-bootstrap-5-admin-dashboard-template/35183671"
-                        target="_blank" class="btn ripple btn-min w-lg mb-3 me-2 btn-primary"><i
-                            class="fe fe-play me-2"></i> Get Started
-                    </a>
-                    <a href="https://themeforest.net/user/spruko/portfolio"
-                        class="btn ripple btn-min w-lg btn-outline-primary mb-3 me-2" target="_blank"><i
-                            class="fe fe-eye me-2"></i>Discover More
-                    </a>
+                    <div class="main-header-center ms-2git d-none d-lg-block">
+                        <input type="text" class="form-control " id="typehead" placeholder="esatcion a consultar" wire:model="parada">
+                        <a href="{{url('estaciones'.$parada)}}"> <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" ><i class="fe fe-search" aria-hidden="true" ></i></button></a>
+                    </div>
+                   
                 </div>
                 <div class="col-xl-6 col-lg-6 my-auto">
                     <img src="assets/images/media/termianlbus.gif" alt="">

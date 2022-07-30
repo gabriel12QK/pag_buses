@@ -8,7 +8,7 @@ use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 class Pageprincipal extends Component
 {
-    public $ruta;
+    public $ruta,$parada;
     public function render()
     {
         $r=DB::table('rutas')
@@ -27,5 +27,17 @@ class Pageprincipal extends Component
         ->select('rutas.*', 'paradas.*','horarios.*')
         ->where('rutas.nom_ruta',$ruta)->get();
         return view('livewire.rutas-p', compact('p'));
+    }
+
+    public function estacion($parada)
+    {
+       
+        $p=DB::table('rutas')
+        ->join('buses','rutas.id','=','buses.id_ruta')
+        ->join('horarios','buses.id','=','horarios.id_bus')
+        ->join('paradas','horarios.id_parada','=','paradas.id')
+        ->select('rutas.*', 'paradas.*','horarios.*')
+        ->where('paradas.nom_parada',$parada)->get();
+        return view('livewire.estaciones', compact('p'));
     }
 }

@@ -29,3 +29,4 @@ Route:: get('rutas',[RutaController:: class, 'showR']);
 Route:: get('Reg-horario',[RutaController:: class, 'showH']);
 Route:: get('principal',[RutaController:: class, 'showPP']);
 Route:: get('ruta-paradas{ruta}',[Pageprincipal:: class, 'rutas']);
+Route:: get('estaciones{parada}',[Pageprincipal:: class, 'estacion']);

@@ -53,6 +53,21 @@ class RutaController extends Controller
        
       return view('paginas.horario');
     }
+    public function showRe()
+    {
+       
+      return view('livewire.registro');
+    }
 
-    
+    public function showDa()
+    {
+       
+      return view('paginas.dasboard');
+    }
+
+    public function showEq()
+    {
+       
+      return view('paginas.equipodev');
+    }
 }

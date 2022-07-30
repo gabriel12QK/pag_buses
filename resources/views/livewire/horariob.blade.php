@@ -1,5 +1,5 @@
-<div class="justify-content-center ">
-    <div class="col-md-12 col-xl-6">
+<div class="d-flex justify-content-center">
+    <div class="col-md-12 col-xl-7">
         <form wire:submit.prevent="guardar">
         <div class="card">
             <div class="card-header">
@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label class="form-label">Bus</label>
                             <select class="form-control select2" data-placeholder="Choose one " wire:model="id_bus">
-                                <option >select...</option>
+                                <option >seleccionar....</option>
                                 @foreach ($bus as $item)
                                <option value="{{$item->id}}" >{{$item->matricula}}</option>
                                @endforeach
@@ -28,9 +28,9 @@
                 <div class="form-group">
                     <div class="form-floating floating-label">
                         <div class="form-group">
-                            <label class="form-label">paradas</label>
+                            <label class="form-label">Paradas</label>
                             <select class="form-control select2" data-placeholder="Choose one " wire:model="id_parada">
-                                <option >select...</option>
+                                <option >seleccionar...</option>
                                 @foreach ($p as $item2)
                                
                                <option value="{{$item2->id}}" >{{$item2->nom_parada}}</option>
@@ -42,7 +42,7 @@
                 </div>
 
                         <div class="form-group">
-                            <label>hora de llegada:</label>
+                            <label>Hora de llegada</label>
                             <div class="wd-150 mg-b-30">
                                 <div class="input-group">
                                     <div class="input-group-text">
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>                   
-                    <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>
+                    <button class="btn btn-primary mt-4 mb-0" type="submit">Enviar</button>
             </div>
         </div>
     </form>

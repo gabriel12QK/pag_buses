@@ -77,7 +77,7 @@
     <script src="../assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 
     <!-- SIDE-MENU JS-->
-    <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
+    <script src="/assets/plugins/sidemenu/sidemenu.js"></script>
 
 	<!-- TypeHead js -->
 	<script src="../assets/plugins/bootstrap5-typehead/autocomplete.js"></script>

@@ -1,6 +1,6 @@
 @extends('layaouts.app')
 @section('header-title')
-Bienvenidos a la pagina de buses
+Registrar los buses disponibles
 @endsection
 @section('contenido')
 <livewire:busesb/>

@@ -1,7 +1,7 @@
 @extends('layaouts.app')
 @section('header-title')
-Registrar tipo de Usuarios
+Dashboard de informacion general
 @endsection
 @section('contenido')
-<livewire:tipob/>
+<livewire:dashboard/>
 @endsection

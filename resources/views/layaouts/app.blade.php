@@ -533,6 +533,7 @@
     <!-- BACK-TO-TOP -->
     <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 @include('plantilla.scrip')
+
 </body>
 
 </html>

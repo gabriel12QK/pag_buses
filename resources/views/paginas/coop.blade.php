@@ -1,6 +1,6 @@
 @extends('layaouts.app')
 @section('header-title')
-Bienvenidos a la pagina de buses
+Registro de Cooperativas
 @endsection
 @section('contenido')
 <livewire:cooperativab/>

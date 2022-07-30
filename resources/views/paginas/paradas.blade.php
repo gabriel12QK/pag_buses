@@ -1,6 +1,6 @@
 @extends('layaouts.app')
 @section('header-title')
-Bienvenidos a la pagina de Paradas
+Registrar Paradas
 @endsection
 @section('contenido')
 <livewire:paradasb/>

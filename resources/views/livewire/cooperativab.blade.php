@@ -1,13 +1,13 @@
-<div class="justify-content-center ">
-    <div class="col-md-12 col-xl-6">
+<div class="d-flex justify-content-center">
+    <div class="col-md-12 col-xl-7">
         <form wire:submit.prevent="guardar">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">registro de cooperativas</h4>
+                <h4 class="card-title">Registro de cooperativas</h4>
             </div>
             <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">nombre de cooperativas</label>
+                            <label for="exampleInputEmail1" class="form-label">Nombre de la Cooperativa</label>
                             <input type="text" class="form-control" wire:model="nom_coop" >
                         </div>
                         {{-- <div class="form-group">
@@ -19,7 +19,7 @@
                                 <div class="form-group">
                                     <label class="form-label">Dueño</label>
                                     <select class="form-control select2" data-placeholder="Choose one " wire:model="id_dueño">
-                                        <option >select...</option>
+                                        <option >seleccionar...</option>
                                         @foreach ($p as $item2)
                                        {{-- @if ($item2->id_tipo == 1) --}}
                                        <option value="{{$item2->id}}" >{{$item2->nom}}</option>

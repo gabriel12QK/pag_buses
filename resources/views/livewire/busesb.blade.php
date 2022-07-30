@@ -3,7 +3,7 @@
      
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">fomulario buses</h3>
+                <h3 class="card-title">Registrar Buses</h3>
             </div>
             <div class="card-body">
                 <form>
@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Chofer</label>
                                         <select class="form-control select2" data-placeholder="Choose one " wire:model="id_chofer">
-                                            <option >select...</option>
+                                            <option >seleccionar</option>
                                             @foreach ($chofer as $item)
                                            {{-- @if ($item2->id_tipo == 1) --}}
                                            <option value="{{$item->id}}" >{{$item->nom}}</option>
@@ -50,7 +50,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Cooperativa</label>
                                         <select class="form-control select2" data-placeholder="Choose one " wire:model="id_coop">
-                                            <option >select...</option>
+                                            <option >seleccionar.</option>
                                             @foreach ($coop as $item2)
                                            {{-- @if ($item2->id_tipo == 1) --}}
                                            <option value="{{$item2->id}}" >{{$item2->nom_coop}}</option>
@@ -68,7 +68,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Ruta</label>
                                         <select class="form-control select2" data-placeholder="Choose one " wire:model="id_ruta">
-                                            <option >select...</option>
+                                            <option >seleccionar...</option>
                                             @foreach ($ruta as $item3)
                                            {{-- @if ($item2->id_tipo == 1) --}}
                                            <option value="{{$item3->id}}" >{{$item3->nom_ruta}}</option>
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary mt-4 mb-0" wire:click="guardar">Submit</button>
+                        <button class="btn btn-primary mt-4 mb-0" wire:click="guardar">Enviar</button>
                     </div>
                     </form>
                 </div>

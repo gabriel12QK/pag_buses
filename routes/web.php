@@ -20,6 +20,9 @@ use App\Http\Livewire\Pageprincipal;
 Route::get('/', function () {
     return view('paginas.login');
 });
+Route:: get('registro',[RutaController:: class, 'showRe']);
+Route:: get('dashboard',[RutaController:: class, 'showDa']);
+Route:: get('dev',[RutaController:: class, 'showEq']);
 Route:: get('tipo_usuario',[RutaController:: class, 'showT']);
 Route:: get('persona',[RutaController:: class, 'showPer']);
 Route:: get('buses',[RutaController:: class, 'showB']);
@@ -30,3 +33,6 @@ Route:: get('Reg-horario',[RutaController:: class, 'showH']);
 Route:: get('principal',[RutaController:: class, 'showPP']);
 Route:: get('ruta-paradas{ruta}',[Pageprincipal:: class, 'rutas']);
 Route:: get('estaciones{parada}',[Pageprincipal:: class, 'estacion']);
+
+
+

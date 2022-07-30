@@ -1,6 +1,6 @@
 @extends('layaouts.app')
 @section('header-title')
-Bienvenidos a la pagina de buses
+Registro de Horarios
 @endsection
 @section('contenido')
 <livewire:horariob/>

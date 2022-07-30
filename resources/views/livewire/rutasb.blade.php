@@ -1,26 +1,26 @@
-<div class="justify-content-center ">
-    <div class="col-md-12 col-xl-6">
+<div class="d-flex justify-content-center">
+    <div class="col-md-12 col-xl-7">
         <form wire:submit.prevent="guardar">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Tipos De Usuarios</h4>
+                <h4 class="card-title">Registrar las Rutas Disponibles</h4>
             </div>
             <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">nombre de ruta</label>
+                            <label for="exampleInputEmail1" class="form-label">Nombre de la ruta</label>
                             <input type="text" class="form-control" wire:model="nom_ruta" >
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">lugar de salida</label>
+                            <label for="exampleInputEmail1" class="form-label">Lugar de salida</label>
                             <input type="text" class="form-control" wire:model="salida" >
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">lugar de llegada</label>
+                            <label for="exampleInputEmail1" class="form-label">Lugar de llegada</label>
                             <input type="text" class="form-control" wire:model="llegada" >
                         </div>
 
                         <div class="form-group">
-                            <label>hora salida:</label>
+                            <label>Hora de inicio</label>
                             <div class="wd-150 mg-b-30">
                                 <div class="input-group">
                                     <div class="input-group-text">
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>hora finalizacion:</label>
+                            <label>Hora de finalización</label>
                             <div class="wd-150 mg-b-30">
                                 <div class="input-group">
                                     <div class="input-group-text">
@@ -51,7 +51,7 @@
                        
                        
                         
-                    <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>
+                    <button class="btn btn-primary mt-4 mb-0" type="submit">Enviar</button>
             </div>
         </div>
     </form>

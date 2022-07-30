@@ -14,8 +14,11 @@ use App\Http\Livewire\Pageprincipal;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('paginas.login');
 });
 Route:: get('tipo_usuario',[RutaController:: class, 'showT']);
 Route:: get('persona',[RutaController:: class, 'showPer']);

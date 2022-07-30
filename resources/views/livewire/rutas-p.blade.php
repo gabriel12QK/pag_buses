@@ -7,6 +7,7 @@ Bienvenidos a la pagina de buses
 {{-- izquierda paradas --}}
 <div class="row">
     <div class="col-md-6">
+       
         <div class="container">
             <ul class="notification">
                 @foreach ($p as $item)
@@ -21,6 +22,7 @@ Bienvenidos a la pagina de buses
                                     {{$item->nom_ruta}}
                                     <p class="fs-15 text-dark fw-bold mb-0">{{$item->nom_parada}}</p>
                                     <p class="mb-0 fs-13 text-dark">{{$item->frecuencia}}</p>
+                                    
                                 </div>
         
                             </div>
@@ -28,12 +30,15 @@ Bienvenidos a la pagina de buses
                     </div>
                 </li>
                 @endforeach
+                
         </div>
+
     </div>
 
     {{-- derecha horario --}}
+  
     <div class="col-md-6">
-       
+        {{$item->nom_ruta}}
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Horario</h3>

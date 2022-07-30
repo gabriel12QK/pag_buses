@@ -38,7 +38,8 @@
                         <h6 class="card-subtitle mb-2 text-dark fw-bold text-end"  >{{$item->nom_ruta}}</h6>
                         <input type="text" wire:model="ruta">
                         <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a>
-                        <p class="card-text">Some quick example text to build on the card title. Some quick example text to build on the card title</p>
+                        <p class="card-text">Lugar de salida: {{$item->salida}}</p>
+                        <p class="card-text">Lugar de llegada: {{$item->llegada}}</p>
                     </div>
                 </div>
             </div>

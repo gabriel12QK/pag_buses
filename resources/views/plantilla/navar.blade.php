@@ -45,12 +45,13 @@
                             class="angle fe fe-chevron-right"></i></a>
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
-                        <li><a href="{{url('buses')}}" class="slide-item"> Buses<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
-                        <li><a href="{{url('cooperativa')}}" class="slide-item"> Cooperativa<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                       
                         <li><a href="{{url('tipo_usuario')}}" class="slide-item"> Tipo<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span> </a></li>
                         <li><a href="{{url('persona')}}" class="slide-item"> Usuario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('cooperativa')}}" class="slide-item"> Cooperativa<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('paradas')}}" class="slide-item"> Paradas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('rutas')}}" class="slide-item"> Rutas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('buses')}}" class="slide-item"> Buses<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('Reg-horario')}}" class="slide-item"> Horario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                     </ul>
                 </li>

@@ -10,15 +10,14 @@
                             <label for="exampleInputEmail1" class="form-label">nombre de ruta</label>
                             <input type="text" class="form-control" wire:model="nom_ruta" >
                         </div>
-                        
-                        {{-- <div class="form-group">
-                            <label class="form-label">Users list</label>
-                            <select class="form-control select2" wire:model="paradas" multiple>
-                                    @foreach ($p as $item)
-                                        <option value="{{$item->nom_parada}}">{{$item->nom_parada}}</option>
-                                    @endforeach
-                                </select>
-                            </div> --}}
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label">lugar de salida</label>
+                            <input type="text" class="form-control" wire:model="salida" >
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label">lugar de llegada</label>
+                            <input type="text" class="form-control" wire:model="llegada" >
+                        </div>
 
                         <div class="form-group">
                             <label>hora salida:</label>

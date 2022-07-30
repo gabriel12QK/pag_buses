@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('rutas', function (Blueprint $table) {
             $table->id();
             $table->string('nom_ruta');
+            $table->string('salida');
+            $table->string('llegada');
             $table->timeTz('inicio', $precision = 0);
             $table->timeTz('fin', $precision = 0);
             $table->boolean('estado');

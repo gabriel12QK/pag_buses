@@ -7,7 +7,7 @@ use App\Models\ruta;
 
 class Rutasb extends Component
 {
-    public $nom_ruta, $inicio, $fin;
+    public $nom_ruta, $inicio, $fin,$salida,$llegada;
     
     public function render()
     {
@@ -18,6 +18,8 @@ class Rutasb extends Component
     {
         ruta::create([
             'nom_ruta' => $this->nom_ruta,
+            'salida' => $this->salida,
+            'llegada' => $this->llegada,
            'inicio'=>$this->inicio,
             'fin'=> $this->fin,
             

@@ -10,5 +10,5 @@ class ruta extends Model
     use HasFactory;
     protected $table= 'rutas';
     public $timestamps =false;
-     public $fillable = ['nom_ruta','inicio','fin','estado'];
+     public $fillable = ['nom_ruta','salida','llegada','inicio','fin','estado'];
 }

@@ -53,4 +53,6 @@ class RutaController extends Controller
        
       return view('paginas.horario');
     }
+
+    
 }

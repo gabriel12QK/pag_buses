@@ -1,1 +1,1 @@
-@extends('layaouts.app')
+@extends('layaouts.log')

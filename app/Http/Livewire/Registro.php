@@ -12,10 +12,14 @@ class Registro extends Component
         'email'=>'',
         'password'=>'',
     ];
-    public function submit()
+    public function guardar()
     {
-        dd($this->form);
+       // dd("sss");
+        User::create($this->form);
+        $this->reset();
+        return redirect('login');
     }
+    
     public function render()
     {
         return view('livewire.registro');

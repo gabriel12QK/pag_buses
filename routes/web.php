@@ -19,7 +19,7 @@ use App\Http\Livewire\Pageprincipal;
 // });
 Route::get('/', function () {
     return view('paginas.login');
-});
+})->name('login');
 Route:: get('registro',[RutaController:: class, 'showRe']);
 Route:: get('dashboard',[RutaController:: class, 'showDa']);
 Route:: get('dev',[RutaController:: class, 'showEq']);

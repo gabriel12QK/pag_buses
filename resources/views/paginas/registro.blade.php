@@ -1,4 +1,4 @@
 @extends('layaouts.log')
-@section('registro')
+@section('login')
 <livewire:registro/>
 @endsection

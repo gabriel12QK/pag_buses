@@ -5,11 +5,12 @@
 @include('plantilla.head')
 
 <body class="app sidebar-mini ltr login-img">
+ {{-- <div id="global-loader">
+        <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
+ </div> --}}
     <div class="">
     <!-- GLOBAL-LOADER -->
-    <div id="global-loader">
-        <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
-    </div>
+    
     <!-- /GLOBAL-LOADER -->
 
     <!-- PAGE -->
@@ -85,8 +86,9 @@
 @include('plantilla.contentL')
     <!-- BACK-TO-TOP -->
     <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
-@include('plantilla.scrip')
+
     </div>
+ @include('plantilla.scrip')
 </body>
 
 </html>

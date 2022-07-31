@@ -1,3 +1,4 @@
+<div>
 <div class="col col-login mx-auto mt-7">
     <div class="text-center">
         <a href="index.html"><img src="../assets/images/brand/logo-white.png" class="header-brand-img" alt=""></a>
@@ -25,18 +26,19 @@
                                 <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                                     <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
                                 </a>
-                                <input class="input100 border-start-0 form-control ms-0" type="email" placeholder="Correo electronico">
+                                <input class="input100 border-start-0 form-control ms-0" type="email" placeholder="Correo electronico" wire:model="form.email">
                             </div>
                             <div class="wrap-input100 validate-input input-group" id="Password-toggle">
                                 <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                                     <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
                                 </a>
-                                <input class="input100 border-start-0 form-control ms-0" type="password" placeholder="Contraseña">
+                                <input class="input100 border-start-0 form-control ms-0" type="password" placeholder="Contraseña" wire:model="form.password">
                             </div>
                             <div class="container-login100-form-btn">
-                                <a href="{{url('principal')}}" class="login100-form-btn btn-primary">
+                                {{-- <a href="{{url('principal')}}" class="login100-form-btn btn-primary">
                                         Iniciar sesion
-                                </a>
+                                </a> --}}
+                                <button class="login100-form-btn btn-primary" wire:click="ingreso"> iniciar sesion </button>
                             </div>
                             <div class="text-center pt-3">
                                 <p class="text-dark mb-0">No eres miembro?<a href="{{url('registro')}}" class="text-primary ms-1">Registrate</a></p>
@@ -51,3 +53,4 @@
         </form>
     </div>
 </div>
+

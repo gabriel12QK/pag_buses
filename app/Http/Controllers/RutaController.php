@@ -56,7 +56,7 @@ class RutaController extends Controller
     public function showRe()
     {
        
-      return view('livewire.registro');
+      return view('paginas.registro');
     }
 
     public function showDa()

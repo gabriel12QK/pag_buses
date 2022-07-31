@@ -10,6 +10,20 @@ class Tipob extends Component
     public $tipo;
     public $button=true;
 
+    protected $rules = [
+        'tipo' => 'required',
+    ];
+    protected $messages = [
+        'tipo.required' => 'campo requerido',
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+
+
+
     public function render()
     {
         return view('livewire.tipob');
@@ -17,6 +31,7 @@ class Tipob extends Component
 
     public function guardar()
     {
+        $this->validate();
         tipo::create([
             'tipo' => $this->tipo,
             'estado'=>1,

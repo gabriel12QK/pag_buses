@@ -10,6 +10,18 @@ class Paradasb extends Component
     public $nom_parada;
     public $button=true;
 
+    protected $rules = [
+        'nom_parada' => 'required',
+    ];
+    protected $messages = [
+        'nom_parada.required' => 'campo requerido',
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+
     public function render()
     {
         $p=parada::all();
@@ -18,7 +30,7 @@ class Paradasb extends Component
 
     public function guardar()
     {
-       
+       $this->validate();
         parada::create([
             'nom_parada' => $this->nom_parada,
             'estado'=>1,

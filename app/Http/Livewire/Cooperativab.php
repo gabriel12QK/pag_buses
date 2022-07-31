@@ -13,6 +13,19 @@ class Cooperativab extends Component
     public $nom_coop, $id_dueño, $cedula;
     public $button=true;
 
+    protected $rules = [
+        'nom_coop' => 'required',
+        'id_dueño' => 'required',
+    ];
+    protected $messages = [
+        'nom_coop.required' => 'campo requerido',
+        'id_dueño.required' => 'campo requerido',
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function render()
     {
 
@@ -23,6 +36,7 @@ class Cooperativab extends Component
     
     public function guardar()
     {
+        $this->validate();
         cooperativa::create([
             'nom_coop' => $this->nom_coop,
             'id_dueño'=> $this->id_dueño,

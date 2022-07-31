@@ -61,10 +61,20 @@
                                     <a class="dropdown-item" href="lockscreen.html">
                                         <i class="dropdown-icon fe fe-lock"></i> Lockscreen
                                     </a>
-                                    <a class="dropdown-item" href="login.html">
+                                    {{-- <a class="dropdown-item" href="login.html">
                                         <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
-                                    </a>
+                                    </a> --}}
+                                    <div class="dropdown-item">
+                                        <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                                          <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>
+                                          <span>Salir</span>
+                                        </a>
+                                        <form action="{{route('logout')}}" method="POST" id="logout-form">
+                                          @csrf
+                                        </form>
+                                    </div>
                          </div>
+                        
                  </div>
              </div>
         </div>

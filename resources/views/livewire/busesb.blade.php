@@ -6,20 +6,38 @@
                 <h3 class="card-title">Registrar Buses</h3>
             </div>
             <div class="card-body">
-                <form>
+                <form  wire:submit.prevent="guardar">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Matricula</label>
                                 <input type="text" class="form-control" wire:model="matricula" >
+                                @error('matricula')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Modelo</label>
                                 <input type="text" class="form-control" wire:model="modelo" >
+                                @error('modelo')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Capacidad</label>
                                 <input type="text" class="form-control" wire:model="capacidad" >
+                                @error('capacidad')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
                             
                         </div>
@@ -41,6 +59,12 @@
                                             </select>
                                     </div>                  
                                 </div>
+                                @error('id_chofer')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
 
                             {{-- select de cooperativa --}}
@@ -59,6 +83,12 @@
                                             </select>
                                     </div>                  
                                 </div>
+                                @error('id_coop')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
 
                             {{-- select ruta --}}
@@ -77,9 +107,15 @@
                                             </select>
                                     </div>                  
                                 </div>
+                                @error('id_ruta')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
                             </div>
                         </div>
-                        <button class="btn btn-primary mt-4 mb-0" wire:click="guardar">Enviar</button>
+                        <button class="btn btn-primary mt-4 mb-0" >Enviar</button>
                     </div>
                     </form>
                 </div>

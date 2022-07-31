@@ -11,14 +11,14 @@
                 Inicio de sesion
             </span>
             <div class="panel panel-primary">
-                <div class="tab-menu-heading">
+                {{-- <div class="tab-menu-heading">
                     <div class="tabs-menu1">
                     
                         <ul class="nav panel-tabs">
                             <li class="mx-0"><a href="#tab5" class="active" data-bs-toggle="tab">Email</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
                 <div class="panel-body tabs-menu-body p-0 pt-5">
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab5">

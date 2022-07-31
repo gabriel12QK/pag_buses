@@ -10,6 +10,22 @@ class Horariob extends Component
 {
     public $frecuencia,$id_parada,$id_bus;
 
+    protected $rules = [
+        'frecuencia' => 'required',
+        'id_parada' => 'required',
+        'id_bus' => 'required',
+    ];
+    protected $messages = [
+        'frecuencia.required' => 'campo requerido',
+        'id_parada.required' => 'campo requerido',
+        'id_bus.required' => 'campo requerido',
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+
     public function render()
     {
         $p=parada::where('estado',1)->get();
@@ -19,7 +35,7 @@ class Horariob extends Component
 
     public function guardar()
     {
-       // dd($this->id_bus);
+        $this->validate();
         horario::create([
             'frecuencia' => $this->frecuencia,
            'id_bus'=>$this->id_bus,

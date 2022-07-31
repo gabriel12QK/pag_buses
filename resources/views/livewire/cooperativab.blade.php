@@ -9,11 +9,14 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="form-label">Nombre de la Cooperativa</label>
                             <input type="text" class="form-control" wire:model="nom_coop" >
+                            @error('nom_coop')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
-                        {{-- <div class="form-group">
-                            <label for="exampleInputEmail1" class="form-label">numero celular:</label>
-                            <input type="text" class="form-control" wire:model="ape" >
-                        </div> --}}
+
                         <div class="form-group">
                             <div class="form-floating floating-label">
                                 <div class="form-group">
@@ -28,6 +31,12 @@
                                         </select>
                                 </div>                  
                             </div>
+                            @error('id_dueño')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                     <button class="btn btn-primary mt-4 mb-0" type="submit">Submit</button>
 

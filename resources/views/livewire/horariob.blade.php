@@ -21,6 +21,12 @@
                                 </select>
                         </div>                  
                     </div>
+                    @error('id_bus')
+                    <div class="alert alert-danger mb-0" role="alert">
+                        <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                        <span class="alert-inner--text">{{ $message }} </span>
+                    </div>
+                    @enderror
                 </div>
 
                 {{-- select de ruta --}}
@@ -39,6 +45,12 @@
                                 </select>
                         </div>                  
                     </div>
+                    @error('id_parada')
+                    <div class="alert alert-danger mb-0" role="alert">
+                        <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                        <span class="alert-inner--text">{{ $message }} </span>
+                    </div>
+                    @enderror
                 </div>
 
                         <div class="form-group">
@@ -52,6 +64,12 @@
                                     <input class="form-control" id="tpBasic" value ="<?php date("H:i:s"); ?>" placeholder="00:00am" type="text" wire:model="frecuencia">
                                 </div>
                             </div>
+                            @error('frecuencia')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>                   
                     <button class="btn btn-primary mt-4 mb-0" type="submit">Enviar</button>
             </div>

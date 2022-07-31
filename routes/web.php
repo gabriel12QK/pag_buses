@@ -17,9 +17,9 @@ use App\Http\Livewire\Pageprincipal;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('paginas.login');
-})->name('login');
+// Route::get('/', function () {
+//     return view('paginas.login');
+// })->name('login');
 Route:: get('registro',[RutaController:: class, 'showRe']);
 Route:: get('dashboard',[RutaController:: class, 'showDa']);
 Route:: get('dev',[RutaController:: class, 'showEq']);
@@ -36,3 +36,7 @@ Route:: get('estaciones{parada}',[Pageprincipal:: class, 'estacion']);
 
 
 
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

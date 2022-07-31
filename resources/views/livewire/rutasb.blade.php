@@ -9,14 +9,32 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="form-label">Nombre de la ruta</label>
                             <input type="text" class="form-control" wire:model="nom_ruta" >
+                            @error('nom_ruta')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="form-label">Lugar de salida</label>
                             <input type="text" class="form-control" wire:model="salida" >
+                            @error('salida')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="form-label">Lugar de llegada</label>
                             <input type="text" class="form-control" wire:model="llegada" >
+                            @error('llegada')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
 
                         <div class="form-group">
@@ -30,6 +48,12 @@
                                     <input class="form-control" id="tpBasic" value ="<?php date("H:i:s"); ?>"  placeholder="00:00am" type="text" wire:model="inicio">
                                 </div>
                             </div>
+                            @error('inicio')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label>Hora de finalización</label>
@@ -42,6 +66,12 @@
                                     <input class="form-control" id="tpBasic" value ="<?php date("H:i:s"); ?>" placeholder="00:00am" type="text" wire:model="fin">
                                 </div>
                             </div>
+                            @error('fin')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                         
                         

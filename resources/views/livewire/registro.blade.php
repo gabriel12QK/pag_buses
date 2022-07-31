@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
 <div class="col col-login mx-auto mt-7">
     <div class="text-center">
         <a href="index.html"><img src="../assets/images/brand/logo-white.png" class="header-brand-img m-0" alt=""></a>
@@ -36,7 +36,7 @@
                 {{-- <a href="{{url('principal')}}" class="login100-form-btn btn-primary">
                         Register
                     </a> --}}
-                    <button class="login100-form-btn btn-primary" wire:click="guardar" > iniciar sesion </button>
+                    {{-- <button class="login100-form-btn btn-primary" wire:click="guardar" > iniciar sesion </button>
             </div>
             <div class="text-center pt-3">
                 <p class="text-dark mb-0">Ya tienes una cuenta?<a href="{{url('')}}"class="text-primary ms-1">Iniciar Sesion</a></p>
@@ -44,4 +44,4 @@
         </form>
             </div>
     </div>
-</div>
+</div>  --}}

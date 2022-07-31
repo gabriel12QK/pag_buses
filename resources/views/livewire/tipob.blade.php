@@ -9,6 +9,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="form-label">Ingrese el tipo de Usuario a registrar</label>
                             <input type="text" class="form-control" wire:model="tipo" >
+                            @error('tipo')
+                            <div class="alert alert-danger mb-0" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                <span class="alert-inner--text">{{ $message }} </span>
+                            </div>
+                            @enderror
                         </div>
                       
                     <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>

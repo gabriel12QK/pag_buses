@@ -9,6 +9,25 @@ class Rutasb extends Component
 {
     public $nom_ruta, $inicio, $fin,$salida,$llegada;
     
+    protected $rules = [
+        'nom_ruta' => 'required',
+        'inicio' => 'required',
+        'fin' => 'required',
+        'salida' => 'required',
+        'llegada' => 'required',
+    ];
+    protected $messages = [
+        'nom_ruta.required' => 'campo requerido',
+        'inicio.required' => 'campo requerido',
+        'fin.required' => 'campo requerido',
+        'salida.required' => 'campo requerido',
+        'llegada.required' => 'campo requerido',
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function render()
     {
        
@@ -16,6 +35,7 @@ class Rutasb extends Component
     }
     public function guardar()
     {
+        $this->validate();
         ruta::create([
             'nom_ruta' => $this->nom_ruta,
             'salida' => $this->salida,

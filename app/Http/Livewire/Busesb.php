@@ -17,7 +17,27 @@ class Busesb extends Component
  //   use WithPagination;
    // protected $paginationTheme = 'bootstrap';
   //  protected $queryString = ['buscar'];
-
+  protected $rules = [
+    'matricula' => 'required',
+    'modelo' => 'required',
+    'capacidad' => 'required|numeric',
+    'id_chofer' => 'required',
+    'id_coop' => 'required',
+    'id_ruta' => 'required',
+];
+protected $messages = [
+    'matricula.required' => 'campo requerido',
+    'capacidad.required' => 'campo requerido',
+    'modelo.required' => 'campo requerido',
+    'capacidad.numeric' => 'solo se permiten numeros',
+    'id_chofer.required' => 'campo requerido',
+    'id_coop.required' => 'campo requerido',
+    'id_ruta.required' => 'campo requerido',
+];
+public function updated($propertyName)
+{
+    $this->validateOnly($propertyName);
+}
     public function render()
     {
         //para la consulta usare query builder
@@ -39,6 +59,7 @@ class Busesb extends Component
 
 
    public function guardar(){
+    $this->validate();
     buses::create([
         'matricula' => $this->matricula,
         'modelo'=>$this->modelo,

@@ -5,13 +5,18 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\cooperativa;
 use App\Models\persona;
+
+use Livewire\WithPagination;
 //query builder
 use Illuminate\Support\Facades\DB;
 class Cooperativab extends Component
 {
-
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $nom_coop, $id_dueño, $cedula,$_id;
     public $button=true;
+
+    protected $queryString = ['cedula'];
 
     protected $rules = [
         'nom_coop' => 'required',
@@ -31,8 +36,9 @@ class Cooperativab extends Component
        // $coop=cooperativa::where('estado',1)->get();
         $coop=DB::table('cooperativas')
         ->join('personas','cooperativas.id_dueño','=','personas.id')
-        ->select('cooperativas.*','personas.nom as nom')
-        -> where('cooperativas.estado',1)->get();
+        ->select('cooperativas.*','personas.nom as nom','personas.CI as CI')
+        //->where( 'personas.CI', 'like', '%'.$this->cedula.'%' )
+        -> where('cooperativas.estado',1)->paginate(5);
         $p=persona::where('estado',1)->get();
        
         return view('livewire.cooperativab', compact('p','coop'));
@@ -54,7 +60,6 @@ class Cooperativab extends Component
         $this->_id = $id;
         $this->nom_coop=$coop->nom_coop;
         $this->button = false;
-
     }
 
     public function update(){

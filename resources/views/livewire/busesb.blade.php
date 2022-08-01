@@ -119,10 +119,11 @@
                                 @enderror
                             </div>
                         </div>
+ 
+                        @if ($button)
                         <div class="form-group m-0 justify-content-center">
                             <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Registro de buses</button>
                         </div>
-                        @if ($button)
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>

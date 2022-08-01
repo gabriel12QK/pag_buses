@@ -22,7 +22,7 @@
                         </div>
                         @if ($button)
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">registro de paradas</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Registro de Paradas</button>
                         </div>
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else
@@ -39,7 +39,7 @@
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tipos de Usuarios Registrados</h5>
+                    <h5 class="modal-title">Registro de Paradas </h5>
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span>
 						</button>
@@ -48,7 +48,7 @@
                     <table id="data-table" class="table table-bordered text-nowrap mb-0">
                           <thead class="border-top">
                             <tr>
-                                  <th class="bg-transparent border-bottom-0">Tipo</th>
+                                  <th class="bg-transparent border-bottom-0">Nombre de Parada</th>
                                    <th class="bg-transparent border-bottom-0"style="width: 5%;">Action</th>
                               </tr>
                             </thead>

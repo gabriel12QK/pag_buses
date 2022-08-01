@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Registro de buses</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Buses Registrados</button>
                         </div>
                         @if ($button)
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
@@ -139,7 +139,7 @@
                 <div class="modal-dialog modal-lg " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">Buses Registrados</h5>
                             <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>

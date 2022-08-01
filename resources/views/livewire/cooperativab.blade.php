@@ -27,8 +27,8 @@
                                     <label class="form-label">Dueño</label>
                                     <select class="form-control select2" data-placeholder="Choose one " wire:model="id_dueño">
                                         <option >seleccionar...</option>
-                                        @foreach ($p as $item2)
-                                        @if ($item2->id_tipo == 1) 
+                                        @foreach ($p as $item2) 
+                                        @if ($item2->id_tipo == 2) 
                                        <option value="{{$item2->id}}" >{{$item2->nom}}</option>
                                        @endif 
                                        @endforeach

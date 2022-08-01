@@ -7,7 +7,7 @@
         @endif
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Registrar personas </h4>
+                <h4 class="card-title">Registrar Personas </h4>
             </div>
             <div class="card-body">
                         <div class="form-group">
@@ -72,7 +72,7 @@
                         
                         @if ($button)
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Registro de personas</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Personas Registradas</button>
                         </div>
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else
@@ -90,7 +90,7 @@
                 <div class="modal-dialog modal-lg " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">Personas Registradas</h5>
                             <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>

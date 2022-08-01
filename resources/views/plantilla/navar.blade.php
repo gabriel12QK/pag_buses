@@ -41,7 +41,7 @@
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
                             class="side-menu__icon fe fe-layers"></i><span
-                            class="side-menu__label">Regisros<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
+                            class="side-menu__label">Registros<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
                             class="angle fe fe-chevron-right"></i></a>
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>

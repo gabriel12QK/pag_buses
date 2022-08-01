@@ -39,7 +39,7 @@ class Rutasb extends Component
         $this->validate();
         ruta::create([
             'nom_ruta' => $this->nom_ruta,
-            'salida' => $this->salida, 
+            'salida' => $this->salida,
             'llegada' => $this->llegada,
            'inicio'=>$this->inicio,
             'fin'=> $this->fin,

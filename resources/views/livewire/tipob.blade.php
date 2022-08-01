@@ -25,7 +25,7 @@
                                 
                                 @if ($button)
                                 <div class="form-group m-0 justify-content-center">
-                                    <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">registro de tipos</button>
+                                    <button class="btn btn-success bg-success-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Tipos de Usuarios Registrados</button>
                                 </div>
                                 <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                                 @else

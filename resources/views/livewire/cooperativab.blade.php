@@ -27,8 +27,8 @@
                                     <label class="form-label">Dueño</label>
                                     <select class="form-control select2" data-placeholder="Choose one " wire:model="id_dueño">
                                         <option >seleccionar...</option>
-                                        @foreach ($p as $item2) 
-                                        @if ($item2->id_tipo == 2) 
+                                        @foreach ($p as $item2)
+                                        @if ($item2->id_tipo == 1) 
                                        <option value="{{$item2->id}}" >{{$item2->nom}}</option>
                                        @endif 
                                        @endforeach
@@ -45,7 +45,7 @@
 
                         @if ($button)
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">registro de cooperativas</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Cooperativas Registradas</button>
                         </div>
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else

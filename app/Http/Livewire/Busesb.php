@@ -7,15 +7,16 @@ use App\Models\persona;
 use App\Models\ruta;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Busesb extends Component
 {
     public $matricula, $modelo, $capacidad, $id_chofer, $id_coop, $id_ruta,$_id;
     public $button=true;
     public $buscar;
-    //paginacion y busqueda
- //   use WithPagination;
-   // protected $paginationTheme = 'bootstrap';
+    
+   use WithPagination;
+   protected $paginationTheme = 'bootstrap';
   //  protected $queryString = ['buscar'];
   protected $rules = [
     'matricula' => 'required',
@@ -47,7 +48,7 @@ public function updated($propertyName)
         ->join('personas','buses.id_chofer','=', 'personas.id')
         ->select('buses.*','rutas.nom_ruta as ruta','personas.nom as nom','cooperativas.nom_coop as coop')
         //->where( 'nom', 'like', '%'.$this->buscar.'%')
-        -> where('buses.estado',1)->get();
+        -> where('buses.estado',1)->paginate(5);
         //->paginate(5);
         //para los selects uso eloquent
         $coop=cooperativa::where('estado',1)->get();

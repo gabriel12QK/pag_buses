@@ -28,6 +28,7 @@ class Pageprincipal extends Component
         ->join('paradas','horarios.id_parada','=','paradas.id')
         ->select('rutas.*', 'paradas.*','horarios.*')
         ->where('rutas.nom_ruta',$ruta)->get();
+
         return view('livewire.rutas-p', compact('p'));
     }
 

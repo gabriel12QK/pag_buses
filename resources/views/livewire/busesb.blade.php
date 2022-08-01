@@ -136,7 +136,7 @@
 
             {{-- MODAL PARA buses--}}
 
-            <div class="modal fade" id="largemodal" tabindex="-1" role="dialog">
+            <div class="modal fade" id="largemodal" tabindex="-1" role="dialog" wire:ignore.self>
                 <div class="modal-dialog modal-lg " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -194,11 +194,12 @@
                                        <td>
                                           <div class="g-2">
                                             <a class="btn text-primary btn-sm" data-bs-dismiss="modal" data-bs-original-title="Edit" wire:click="edit({{$item->id}})"><span class="fe fe-edit fs-14"></span></a>
-                                             <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" data-bs-original-title="Delete" wire:click="destroyL({{$item->id}})"><span class="fe fe-trash-2 fs-14"></span></a>
+                                             <a class="btn text-danger btn-sm"    data-bs-original-title="Delete" wire:click="destroyL({{$item->id}})"><span class="fe fe-trash-2 fs-14"></span></a>
                                           </div>
                                           </td>
                                        </tr>
                                        @endforeach
+                                       {{$bus->links() }}
                                   </tbody>
                               </table> 
                         </div>

@@ -7,7 +7,7 @@ use App\Models\tipo;
 
 class Tipob extends Component
 {
-    public $tipo;
+    public $tipo,$_id;
     public $button=true;
 
     protected $rules = [
@@ -26,7 +26,8 @@ class Tipob extends Component
 
     public function render()
     {
-        return view('livewire.tipob');
+        $t=tipo::where('estado',1)->get();
+        return view('livewire.tipob', compact('t'));
     }
 
     public function guardar()
@@ -40,6 +41,7 @@ class Tipob extends Component
     }
 
     public function edit($id){
+        //dd("asdasd");
         $tipo =tipo::find($id);
         $this->_id = $id;
         $this->tipo=$tipo->tipo;
@@ -48,7 +50,7 @@ class Tipob extends Component
     }
 
     public function update(){
-       // $this->validate();
+       $this->validate();
        $tipo =tipo::find( $this->_id);
         $tipo->update([
             'tipo' => $this->tipo,      

@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class Busesb extends Component
 {
-    public $matricula, $modelo, $capacidad, $id_chofer, $id_coop, $id_ruta;
+    public $matricula, $modelo, $capacidad, $id_chofer, $id_coop, $id_ruta,$_id;
     public $button=true;
     public $buscar;
     //paginacion y busqueda
@@ -45,16 +45,16 @@ public function updated($propertyName)
         ->join('rutas','buses.id_ruta','=', 'rutas.id')
         ->join('cooperativas','buses.id_coop','=', 'cooperativas.id')
         ->join('personas','buses.id_chofer','=', 'personas.id')
-        ->select('buses.*','rutas.nom_ruta as ruta','personas.nom','cooperativas.nom_coop as coop')
+        ->select('buses.*','rutas.nom_ruta as ruta','personas.nom as nom','cooperativas.nom_coop as coop')
         //->where( 'nom', 'like', '%'.$this->buscar.'%')
         -> where('buses.estado',1)->get();
         //->paginate(5);
         //para los selects uso eloquent
         $coop=cooperativa::where('estado',1)->get();
         $ruta=ruta::where('estado',1)->get();
-        $chofer=persona::where('personas.id_tipo',2)->get();
+        $chofer=persona::all();
 
-        return view('livewire.busesb',compact('coop','ruta','chofer'));
+        return view('livewire.busesb',compact('coop','ruta','chofer','bus'));
     }
 
 
@@ -77,7 +77,7 @@ public function updated($propertyName)
    {
     $buses =buses::find($id);
     $this->_id = $id;
-    $this->mat=$buses->matricula;
+    $this->matricula=$buses->matricula;
     $this->capacidad=$buses->capacidad;
     $this->modelo=$buses->modelo;
     $this->id_chofer=$buses->id_chofer;
@@ -88,11 +88,11 @@ public function updated($propertyName)
     }
 
     //funcion para la actualizacion de datos
-   public function update(){
-   // $this->validate();
+ public function update(){
+    $this->validate();
     $buses =buses::find( $this->_id);
-    $buses>update([
-        'matricula' => $this->mat,
+    $buses->update([
+        'matricula' => $this->matricula,
         'modelo'=>$this->modelo,
         'capacidad'=> $this->capacidad, 
         'estado'=>1,

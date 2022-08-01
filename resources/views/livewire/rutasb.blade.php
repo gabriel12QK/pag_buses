@@ -1,6 +1,10 @@
 <div class="d-flex justify-content-center">
     <div class="col-md-12 col-xl-7">
-        <form wire:submit.prevent="guardar">
+        @if ($button)
+        <form wire:submit.prevent="guardar"> 
+        @else
+        <form wire:submit.prevent="update"> 
+        @endif
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Registrar las Rutas Disponibles</h4>
@@ -73,51 +77,84 @@
                             </div>
                             @enderror
                         </div>
-                        
-                        
-                                {{-- <div class="form-group m-0 justify-content-center">
-                                    <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Small Modal</button>
-                                </div> --}}
-                       
-                       
-                        
-                    <button class="btn btn-primary mt-4 mb-0" type="submit">Enviar</button>
+
+                        @if ($button)
+                        <div class="form-group m-0 justify-content-center">
+                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">registro de tipos</button>
+                        </div>
+                        <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
+                        @else
+                        <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>
+                        @endif
             </div>
         </div>
     </form>
     </div>
 
-    {{-- MODAL PARA PARADAS --}}
-{{-- 
-    <div class="modal  fade" id="smallmodal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
+      {{-- MODAL PARA rutas--}}
+
+      <div class="modal fade" id="largemodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Paradas</h5>
+                    <h5 class="modal-title">Modal title</h5>
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
+                            <span aria-hidden="true">×</span>
+                        </button>
                 </div>
                 <div class="modal-body">
-                    <div class="custom-controls-stacked">
-                        @foreach ($p as $item)
-                        <label class="custom-control custom-checkbox">
-                           
-                            <input type="checkbox" class="custom-control-input" >
-                            <span class="custom-control-label" wire:model="paradas" >{{$item->nom_parada}}</span>
-                           
-                                
-                            </label>
-                        @endforeach
-                       
-                    </div>
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-primary">Save changes</button>
+                    <table id="data-table" class="table table-bordered text-nowrap mb-0">
+                        <thead class="border-top">
+                          <tr>
+                                <th class="bg-transparent border-bottom-0">Ruta</th>
+                                <th class="bg-transparent border-bottom-0">Salida</th>
+                                <th class="bg-transparent border-bottom-0">Destino</th>
+                                <th class="bg-transparent border-bottom-0">Hora-Inicio</th>
+                                <th class="bg-transparent border-bottom-0">Hora-fin</th>
+                                 <th class="bg-transparent border-bottom-0"style="width: 5%;">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              @foreach ($ruta as $item)
+                              <tr class="border-bottom">
+                              <td>
+                                  <div class="mt-0 mt-sm-2 d-block">
+                                      <h6 class="mb-0 fs-14 fw-semibold"> {{$item->nom_ruta}}</h6>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="mt-0 mt-sm-2 d-block">
+                                      <h6 class="mb-0 fs-14 fw-semibold"> {{$item->salida}}</h6>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="mt-0 mt-sm-2 d-block">
+                                      <h6 class="mb-0 fs-14 fw-semibold"> {{$item->llegada}}</h6>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="mt-0 mt-sm-2 d-block">
+                                      <h6 class="mb-0 fs-14 fw-semibold"> {{$item->inicio}}</h6>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="mt-0 mt-sm-2 d-block">
+                                      <h6 class="mb-0 fs-14 fw-semibold"> {{$item->fin}}</h6>
+                                  </div>
+                              </td>
+                               <td>
+                                  <div class="g-2">
+                                    <a class="btn text-primary btn-sm" data-bs-dismiss="modal" data-bs-original-title="Edit" wire:click="edit({{$item->id}})"><span class="fe fe-edit fs-14"></span></a>
+                                     <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" data-bs-original-title="Delete" wire:click="destroyL({{$item->id}})"><span class="fe fe-trash-2 fs-14"></span></a>
+                                  </div>
+                                  </td>
+                               </tr>
+                               @endforeach
+                          </tbody>
+                      </table> 
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
+
 </div>

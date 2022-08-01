@@ -10,8 +10,8 @@ use Livewire\Component;
 
 class Personab extends Component
 {
-    public $nom,$ape,$CI,$telf,$id_tipo;
-
+    public $nom,$ape,$CI,$telf,$id_tipo,$_id;
+    public $button=true;
     protected $rules = [
         'nom' => 'required',
         'ape' => 'required',
@@ -42,7 +42,7 @@ class Personab extends Component
         
         $p=DB::table('personas')
         ->join('tipos','personas.id_tipo','=','tipos.id')
-        ->select('personas.*','tipos.*')
+        ->select('personas.*','tipos.tipo')
         //->where( 'personas.CI', 'like', '%'.$this->buscar.'%')
         -> where('personas.estado',1)->get();
         $t=tipo::where('estado',1)->get();
@@ -76,7 +76,7 @@ class Personab extends Component
     }
 
     public function update(){
-       // $this->validate();
+        $this->validate();
        $persona= persona::find( $this->_id);
         $persona->update([
             'nom' => $this->nom,

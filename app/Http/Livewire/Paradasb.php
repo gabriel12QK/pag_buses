@@ -7,7 +7,7 @@ use App\Models\parada;
 
 class Paradasb extends Component
 {
-    public $nom_parada;
+    public $nom_parada,$_id;
     public $button=true;
 
     protected $rules = [
@@ -24,7 +24,7 @@ class Paradasb extends Component
 
     public function render()
     {
-        $p=parada::all();
+        $p=parada::where('estado',1)->get();
        return view('livewire.paradasb',compact('p'));
     }
 

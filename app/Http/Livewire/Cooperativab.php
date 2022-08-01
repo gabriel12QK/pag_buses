@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class Cooperativab extends Component
 {
 
-    public $nom_coop, $id_dueño, $cedula;
+    public $nom_coop, $id_dueño, $cedula,$_id;
     public $button=true;
 
     protected $rules = [
@@ -28,10 +28,14 @@ class Cooperativab extends Component
 
     public function render()
     {
-
-        $p=persona::where('personas.id_tipo',1)->get();
+       // $coop=cooperativa::where('estado',1)->get();
+        $coop=DB::table('cooperativas')
+        ->join('personas','cooperativas.id_dueño','=','personas.id')
+        ->select('cooperativas.*','personas.nom as nom')
+        -> where('cooperativas.estado',1)->get();
+        $p=persona::where('estado',1)->get();
        
-        return view('livewire.cooperativab', compact('p'));
+        return view('livewire.cooperativab', compact('p','coop'));
     }
     
     public function guardar()
@@ -54,7 +58,7 @@ class Cooperativab extends Component
     }
 
     public function update(){
-       // $this->validate();
+       $this->validate();
        $coop = cooperativa::find( $this->_id);
         $coop->update([
             'nom_coop' => $this->nom_coop,

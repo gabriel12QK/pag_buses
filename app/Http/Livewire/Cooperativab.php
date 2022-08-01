@@ -37,7 +37,7 @@ class Cooperativab extends Component
         $coop=DB::table('cooperativas')
         ->join('personas','cooperativas.id_dueño','=','personas.id')
         ->select('cooperativas.*','personas.nom as nom','personas.CI as CI')
-        //->where( 'personas.CI', 'like', '%'.$this->cedula.'%' )
+        ->where( 'personas.CI', 'like', '%'.$this->cedula.'%' )
         -> where('cooperativas.estado',1)->paginate(5);
         $p=persona::where('estado',1)->get();
        

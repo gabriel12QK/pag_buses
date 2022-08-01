@@ -61,7 +61,7 @@
     
      {{-- MODAL PARA Cooperativas --}}
  
-     <div class="modal fade" id="largemodal" tabindex="-1" role="dialog">
+     <div class="modal fade" id="largemodal" tabindex="-1" role="dialog" wire:ignore.self>
         <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-body">
-                       
+                        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" wire:model="cedula">
                         <table id="data-table" class="table table-bordered text-nowrap mb-0">
                               <thead class="border-top">
                                 <tr>
@@ -103,7 +103,7 @@
                                      <td>
                                         <div class="g-2">
                                           <a class="btn text-primary btn-sm" data-bs-dismiss="modal"  wire:click="edit({{$item->id}})"><i class="fe fe-edit fs-13"></i></a>
-                                           <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" wire:click="destroyL({{$item->id}})"><i class="fe fe-trash-2 fs-13"></i></a>
+                                           <a class="btn text-danger btn-sm"    wire:click="destroyL({{$item->id}})"><i class="fe fe-trash-2 fs-13"></i></a>
                                         </div>
                                         </td>
                                      </tr>

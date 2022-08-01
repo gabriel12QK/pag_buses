@@ -45,7 +45,7 @@
 
                         @if ($button)
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-success bg-success-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Cooperativas Registradas</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Registro de Cooperativas</button>
                         </div>
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else
@@ -61,52 +61,61 @@
     
      {{-- MODAL PARA Cooperativas --}}
  
-     <div class="modal  fade" id="smallmodal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
+     <div class="modal fade" id="largemodal" tabindex="-1" role="dialog" wire:ignore.self>
+        <div class="modal-dialog modal-lg " role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Cooperativas Registradas</h5>
+                    <h5 class="modal-title">Modal title</h5>
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
+                            <span aria-hidden="true">×</span>
+                        </button>
                 </div>
                 <div class="modal-body">
-                    <table id="data-table" class="table table-bordered text-nowrap mb-0">
-                          <thead class="border-top">
-                            <tr>
-                                  <th class="bg-transparent border-bottom-0">Cooperativa</th>
-                                  <th class="bg-transparent border-bottom-0">Dueño</th>
-                                   <th class="bg-transparent border-bottom-0"style="width: 5%;">Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($coop as $item)
-                                <tr class="border-bottom"> 
-                                <td>
-                                    <div class="mt-0 mt-sm-2 d-block">
-                                        <h6 class="mb-0 fs-13 fw-semibold"> {{$item->nom_coop}}</h6>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="mt-0 mt-sm-2 d-block">
-                                        <h6 class="mb-0 fs-13.
-                                         fw-semibold"> {{$item->nom}} </h6>
-                                    </div>
-                                </td>
-                                 <td>
-                                    <div class="g-2">
-                                      <a class="btn text-primary btn-sm" data-bs-dismiss="modal"  wire:click="edit({{$item->id}})"><i class="fe fe-edit fs-13"></i></a>
-                                       <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" wire:click="destroyL({{$item->id}})"><i class="fe fe-trash-2 fs-13"></i></a>
-                                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" wire:model="cedula">
+                        <table id="data-table" class="table table-bordered text-nowrap mb-0">
+                              <thead class="border-top">
+                                <tr>
+                                      <th class="bg-transparent border-bottom-0">Cooperativa</th>
+                                      <th class="bg-transparent border-bottom-0">Dueño</th>
+                                      <th class="bg-transparent border-bottom-0">Cedula</th>
+                                       <th class="bg-transparent border-bottom-0"style="width: 5%;">Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($coop as $item)
+                                    <tr class="border-bottom"> 
+                                    <td>
+                                        <div class="mt-0 mt-sm-2 d-block">
+                                            <h6 class="mb-0 fs-13 fw-semibold"> {{$item->nom_coop}}</h6>
+                                        </div>
                                     </td>
-                                 </tr>
-                                 @endforeach
-                            </tbody>
-                        </table>
+                                    <td>
+                                        <div class="mt-0 mt-sm-2 d-block">
+                                            <h6 class="mb-0 fs-13. fw-semibold"> {{$item->nom}} </h6>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="mt-0 mt-sm-2 d-block">
+                                            <h6 class="mb-0 fs-13. fw-semibold"> {{$item->CI}} </h6>
+                                        </div>
+                                    </td>
+                                     <td>
+                                        <div class="g-2">
+                                          <a class="btn text-primary btn-sm" data-bs-dismiss="modal"  wire:click="edit({{$item->id}})"><i class="fe fe-edit fs-13"></i></a>
+                                           <a class="btn text-danger btn-sm"    wire:click="destroyL({{$item->id}})"><i class="fe fe-trash-2 fs-13"></i></a>
+                                        </div>
+                                        </td>
+                                     </tr>
+                                     @endforeach
+                                     {{ $coop->links() }}
+                                </tbody>
+                            </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
 </div>
  {{-- MODAL PARA PARADAS

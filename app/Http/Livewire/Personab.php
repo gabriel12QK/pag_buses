@@ -3,13 +3,16 @@
 namespace App\Http\Livewire;
 use App\Models\persona;
 use App\Models\tipo;
-
+use Livewire\WithPagination;
 //query builder
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class Personab extends Component
 {
+
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $nom,$ape,$CI,$telf,$id_tipo,$_id;
     public $button=true;
     protected $rules = [
@@ -44,7 +47,7 @@ class Personab extends Component
         ->join('tipos','personas.id_tipo','=','tipos.id')
         ->select('personas.*','tipos.tipo')
         //->where( 'personas.CI', 'like', '%'.$this->buscar.'%')
-        -> where('personas.estado',1)->get();
+        -> where('personas.estado',1)->paginate(5);
         $t=tipo::where('estado',1)->get();
         return view('livewire.personab', compact('p','t'));
     }

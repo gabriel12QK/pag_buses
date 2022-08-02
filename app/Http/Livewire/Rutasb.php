@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\ruta;
-
+use Livewire\WithPagination;
 class Rutasb extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $nom_ruta, $inicio, $fin,$salida,$llegada,$_id;
     public $button=true;
     
@@ -31,7 +33,7 @@ class Rutasb extends Component
 
     public function render()
     {
-        $ruta=ruta::where('estado',1)->get();
+        $ruta=ruta::where('estado',1)->paginate(5);
         return view('livewire.rutasb', compact('ruta'));
     }
     public function guardar()
@@ -46,6 +48,7 @@ class Rutasb extends Component
             'estado'=>1,
         ]);
         $this->reset();
+        session()->flash('message', 'registro guardado con exito.');
     }
     public function edit($id){
         //dd("asdasd");
@@ -72,7 +75,7 @@ class Rutasb extends Component
         'estado'=>1,
     ]);
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+       session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function destroyL($id){

@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\tipo;
-
+use Livewire\WithPagination;
 class Tipob extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $tipo,$_id;
     public $button=true;
 
@@ -26,7 +28,7 @@ class Tipob extends Component
 
     public function render()
     {
-        $t=tipo::where('estado',1)->get();
+        $t=tipo::where('estado',1)->paginate(5);
         return view('livewire.tipob', compact('t'));
     }
 
@@ -38,6 +40,7 @@ class Tipob extends Component
             'estado'=>1,
         ]);
         $this->reset();
+        session()->flash('message', 'registro guardado con exito.');
     }
 
     public function edit($id){
@@ -57,7 +60,7 @@ class Tipob extends Component
             'estado' => 1,
         ]);
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+      session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function destroyL($id){

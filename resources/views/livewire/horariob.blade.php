@@ -65,7 +65,7 @@
                                         <i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
                                     </div>
                                     <!-- input-group-text -->
-                                    <input class="form-control" id="tpBasic" value ="<?php date("H:i:s"); ?>" placeholder="00:00am" type="text" wire:model="frecuencia">
+                                    <input class="form-control"  value ="<?php date("H:i:s"); ?>" placeholder="00:00am" type="text" wire:model="frecuencia">
                                 </div>
                             </div>
                             @error('frecuencia')
@@ -77,24 +77,32 @@
                         </div>                   
                         @if ($button)
                         <div class="form-group m-0 justify-content-center">
-                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">registro de tipos</button>
+                            <button class="btn btn-success bg-success-gradient mt-3" type="button" data-bs-toggle="modal" data-bs-target="#largemodal">Registro de Horarios</button>
                         </div>
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
                         @else
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>
                         @endif
             </div>
+            @if (session()->has('message'))
+            <div class="alert alert-success" role="alert">
+                <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+                <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
+            </div>
+           @endif
+           
         </div>
+       
     </form>
     </div>
-
+ 
           {{-- MODAL PARA rutas--}}
 
-          <div class="modal fade" id="largemodal" tabindex="-1" role="dialog">
+          <div class="modal fade" id="largemodal" tabindex="-1" role="dialog" wire:ignore.self>
             <div class="modal-dialog modal-lg " role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
+                        <h5 class="modal-title">Registro de Horarios</h5>
                         <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -136,11 +144,12 @@
                                    <td>
                                       <div class="g-2">
                                         <a class="btn text-primary btn-sm" data-bs-dismiss="modal" data-bs-original-title="Edit" wire:click="edit({{$item->id}})"><span class="fe fe-edit fs-14"></span></a>
-                                         <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" data-bs-original-title="Delete" ><span class="fe fe-trash-2 fs-14"></span></a>
+                                         <a class="btn text-danger btn-sm"   data-bs-original-title="Delete" ><span class="fe fe-trash-2 fs-14"></span></a>
                                       </div>
                                       </td>
                                    </tr>
                                    @endforeach
+                                   {{ $h->links() }}
                               </tbody>
                           </table> 
                     </div>
@@ -149,3 +158,17 @@
         </div>
 
 </div>
+
+{{-- @include('plantilla.scrip')
+<script>
+    $("#boton1").click(function() {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se ha guardado con exito el registro',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    })
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}

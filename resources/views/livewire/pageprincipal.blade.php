@@ -10,11 +10,6 @@
                     Bienvenid@ a la forma mas facil y rapida de consultar los horarios
                     y paradas de los buses urbanos de la cuidad de calceta
                     </h4>
-                    <div class="input-group mb-2" >
-                        <input type="text" class="form-control " id="typehead" placeholder="esatcion a consultar" wire:model="parada">
-                        <a href="{{url('estaciones'.$parada)}}"><span class="input-group-text btn btn-primary">Search</span></a>
-                    </div>
-                   
                 </div>
                 <div class="col-xl-6 col-lg-6 my-auto">
                     <img src="assets/images/media/termianlbus.gif" alt="">
@@ -27,19 +22,63 @@
 
 
         <div class="row">
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="card-status bg-blue br-te-7 br-ts-7"></div>
+                    <div class="card-header">
+                        <h3 class="card-title">Buscar Por Parada <span class="text-warning"><i
+                            class="fa fa-map-marker  text-warning"></i></span></h3>
+                       
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                            <a href="{{url('estaciones'.$parada)}}"> <button class="btn btn-primary" type="button" id="button-addon2">Buscar Parada</button></a>
+                                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" placeholder="Parada" aria-describedby="button-addon1" wire:model="parada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COL END -->
+            <div class="col-md-12 col-xl-6">
+                <div class="card">
+                    <div class="card-status bg-blue br-te-7 br-ts-7"></div>
+                    <div class="card-header">
+                        <h3 class="card-title">Buscar Por Ruta <span class="text-green"><i
+                            class="fa fa-map  text-green"></i></span></h3>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <a href="{{url('ruta-paradas'.$ruta)}}"> <button class="btn btn-primary" type="button" id="button-addon1">Buscar Ruta </button></a>
+                                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" placeholder="Ruta" aria-describedby="button-addon1" wire:model="ruta">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COL END -->
+        </div>
+
+
+        <div class="row">
             <h5 class="fw-semibold mb-4">Rutas</h5>
             @foreach ($r as $item)
             <div class="col-xl-3 col-md-6">
                 <div class="card">
                     <span class="ribbone-success-left">
-                        <span><i class="fe fe-zap"></i></span>
+                        <span><i class="fa fa-bus"></i></span>
                     </span>
                     <div class="card-body  p-6">
                         <h6 class="card-subtitle mb-2 text-dark fw-bold text-end"  >{{$item->nom_ruta}}</h6>
-                        <input type="text" wire:model="ruta">
-                        <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a>
-                        <p class="card-text">Lugar de salida: {{$item->salida}}</p>
-                        <p class="card-text">Lugar de llegada: {{$item->llegada}}</p>
+                        {{-- <input type="text" wire:model="ruta">
+                        <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a> --}}
+                        <h4>Lugar de salida <i class="fa fa-map-marker"></i></h4>
+                        <h5>{{$item->salida}}</h5>
+                        <h4>Lugar de llegada <i class="fa fa-map-pin"></i></h4>
+                        <h5>{{$item->llegada}}</h5>
                     </div>
                 </div>
             </div>
@@ -47,42 +86,6 @@
             
            
         </div>
-
-      
-        {{-- <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">KeyTable integration Autofill</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="key-table" class="table table-bordered text-nowrap mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>Ruta</th>
-                                      
-                                        <th>Inicio</th>
-                                        <th>Fin</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  @foreach ($r as $item)
-                                  <tr>
-                                      <td>{{$item->nom_ruta}}</td>
-                                      <td>{{$item->inicio}}</td>
-                                      <td>{{$item->fin}}</td>
-                                </tr>
-                                  @endforeach
-                                   
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- --}}
 
 
 </div>

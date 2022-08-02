@@ -41,7 +41,7 @@
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
                             class="side-menu__icon fe fe-layers"></i><span
-                            class="side-menu__label">Regisros<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
+                            class="side-menu__label">Registros<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
                             class="angle fe fe-chevron-right"></i></a>
                     <ul class="slide-menu">
                         <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
@@ -53,6 +53,24 @@
                         <li><a href="{{url('rutas')}}" class="slide-item"> Rutas<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('buses')}}" class="slide-item"> Buses<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                         <li><a href="{{url('Reg-horario')}}" class="slide-item"> Horario<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-category">
+                    <h3>About</h3>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                            class="side-menu__icon fa fa-info"></i><span
+                            class="side-menu__label">About<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></span><i
+                            class="angle fe fe-chevron-right"></i></a>
+                    <ul class="slide-menu">
+                        <li class="side-menu-label1"><a href="javascript:void(0)">Pages</a></li>
+                       
+                        <li><a href="{{url('dev')}}" class="slide-item">Desarrolladores<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span> </a></li>
+                        <li><a href="{{url('proyecto')}}" class="slide-item">Proyecto<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
+                        <li><a href="{{url('info')}}" class="slide-item">Info<span class="badge bg-red br-5 side-badge blink-text pb-1">DEV</span></a></li>
                     </ul>
                 </li>
                 

@@ -8,8 +8,9 @@
                                             <div class="card-body">
                                                 <div class="d-flex">
                                                     <div class="mt-2">
-                                                        <h6 class="">Total Users</h6>
-                                                        <h2 class="mb-0 number-font">44,278</h2>
+                                                        <h3 class="">Coop. <span class="text-secondary"><i
+                                                            class="fa fa-home  text-secondary"></i></span></h3>
+                                                        <h2 class="mb-0 number-font">{{$cooperativa}}</h2>
                                                     </div>
                                                     <div class="ms-auto">
                                                         <div class="chart-wrapper mt-1">
@@ -19,8 +20,8 @@
                                                     </div>
                                                 </div>
                                                 <span class="text-muted fs-12"><span class="text-secondary"><i
-                                                            class="fe fe-arrow-up-circle  text-secondary"></i> 5%</span>
-                                                    Last week</span>
+                                                            class="fa fa-check  text-secondary"></i> Total</span>
+                                                    registradas</span>
                                             </div>
                                         </div>
                                     </div>
@@ -29,8 +30,9 @@
                                             <div class="card-body">
                                                 <div class="d-flex">
                                                     <div class="mt-2">
-                                                        <h6 class="">Total Profit</h6>
-                                                        <h2 class="mb-0 number-font">67,987</h2>
+                                                        <h3 class="">Buses <span class="text-pink"><i
+                                                            class="fa fa-bus  text-pink"></i></span></h3>
+                                                        <h2 class="mb-0 number-font">{{$buses}}</h2>
                                                     </div>
                                                     <div class="ms-auto">
                                                         <div class="chart-wrapper mt-1">
@@ -40,8 +42,8 @@
                                                     </div>
                                                 </div>
                                                 <span class="text-muted fs-12"><span class="text-pink"><i
-                                                            class="fe fe-arrow-down-circle text-pink"></i> 0.75%</span>
-                                                    Last 6 days</span>
+                                                            class="fa fa-check text-pink"></i>Total</span>
+                                                    registrados</span>
                                             </div>
                                         </div>
                                     </div>
@@ -50,8 +52,9 @@
                                             <div class="card-body">
                                                 <div class="d-flex">
                                                     <div class="mt-2">
-                                                        <h6 class="">Total Expenses</h6>
-                                                        <h2 class="mb-0 number-font">$76,965</h2>
+                                                        <h3 class="">Rutas <span class="text-green"><i
+                                                            class="fa fa-map  text-green"></i></span></h3>
+                                                        <h2 class="mb-0 number-font">{{$ruta}}</h2>
                                                     </div>
                                                     <div class="ms-auto">
                                                         <div class="chart-wrapper mt-1">
@@ -61,8 +64,8 @@
                                                     </div>
                                                 </div>
                                                 <span class="text-muted fs-12"><span class="text-green"><i
-                                                            class="fe fe-arrow-up-circle text-green"></i> 0.9%</span>
-                                                    Last 9 days</span>
+                                                            class="fa fa-check text-green"></i> Total</span>
+                                                    Registradas</span>
                                             </div>
                                         </div>
                                     </div>
@@ -71,8 +74,9 @@
                                             <div class="card-body">
                                                 <div class="d-flex">
                                                     <div class="mt-2">
-                                                        <h6 class="">Total Cost</h6>
-                                                        <h2 class="mb-0 number-font">$59,765</h2>
+                                                        <h3 class="">Paradas <span class="text-warning"><i
+                                                            class="fa fa-map-marker  text-warning"></i></span></h3>
+                                                        <h2 class="mb-0 number-font">{{$parada}}</h2>
                                                     </div>
                                                     <div class="ms-auto">
                                                         <div class="chart-wrapper mt-1">
@@ -82,8 +86,8 @@
                                                     </div>
                                                 </div>
                                                 <span class="text-muted fs-12"><span class="text-warning"><i
-                                                            class="fe fe-arrow-up-circle text-warning"></i> 0.6%</span>
-                                                    Last year</span>
+                                                            class="fa fa-check text-warning"></i> Total</span>
+                                                    Registradas</span>
                                             </div>
                                         </div>
                                     </div>

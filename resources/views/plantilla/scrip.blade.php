@@ -91,5 +91,5 @@
 
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
-
+ 
     @livewireScripts

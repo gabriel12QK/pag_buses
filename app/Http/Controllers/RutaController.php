@@ -70,4 +70,17 @@ class RutaController extends Controller
        
       return view('paginas.equipodev');
     }
+
+    public function showPr()
+    {
+       
+      return view('paginas.proyecto');
+    }
+
+    public function showIn()
+    {
+       
+      return view('paginas.info');
+    }
 }
+

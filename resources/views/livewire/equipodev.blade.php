@@ -4,8 +4,8 @@
                                 <div class="col-lg-12">
                                     <div class="row py-1">
                                         <div class="text-center">
-                                            <h4 class="display-5 fw-semibold">Our mission is to make Work Meaningful.</h4>
-                                            <p class="">If you are going to use a passage of Lorem Ipsum, you need to as necessary All the Lorem Ipsum generators on the Internet tend to repeat Various versions have evolved over repeat Various versions have evolved over.</p>
+                                            <h2 class="display-5 fw-semibold">SBUC</h2>
+                                            <h4 class="">Sistema de Buses Urbanos Calceta</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -20,35 +20,6 @@
                             </div>
                             <!-- ROW-2 CLOSED -->
 
-                            <!-- ROW-3 OPEN -->
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="card mt-7">
-                                        <div class="card-body p-5 text-dark">
-                                            <div class="statistics-info p-4">
-                                                <div class="row">
-                                                    <div class="col-xl-6">
-                                                        <div class="">
-                                                            <h2 class="fw-bold">We Help to <span class="text-primary">Build</span> Your Dream Project.</h2>
-                                                            <h4 class="leading-normal">majority have suffered alteration in some form, by injected humour</h4>
-                                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered by injected humour, or randomised words which don't look even slightly believable.</p>
-                                                            <p>All the Lorem Ipsum generators on the Internet tend to repeat Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                                                            <p> If you are going to use a passage of Lorem Ipsum, you need to as necessary All the Lorem Ipsum generators on the Internet tend to repeat Various versions have evolved over the years, sometimes by
-                                                                accident, sometimes on purpose (injected humour and the like).</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6">
-                                                        <div class="text-center">
-                                                            <img src="../assets/images/media/team-startup.png" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ROW-3 CLOSED -->
 
                             <!-- ROW-5 OPEN-->
                             <div class="row mt-8">

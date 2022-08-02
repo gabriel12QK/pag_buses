@@ -18,12 +18,6 @@ Bienvenidos a la pagina de buses
                                 <th class="bg-transparent border-bottom-0 w-5">Estacion</th>
                                 <th class="bg-transparent border-bottom-0">llegada</th>
                                 <th class="bg-transparent border-bottom-0">Ruta</th>
-                                {{-- <th class="bg-transparent border-bottom-0">% 24h</th>
-                                <th class="bg-transparent border-bottom-0">Market Cap</th>
-                                <th class="bg-transparent border-bottom-0">Circulating Supply</th>
-                                <th class="bg-transparent border-bottom-0">Volume 24H</th>
-                                <th class="bg-transparent border-bottom-0">CMGR/Month</th>
-                                <th class="bg-transparent border-bottom-0 w-5">Inflation</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -35,15 +29,6 @@ Bienvenidos a la pagina de buses
                                 <td>{{$item->nom_ruta}}</td>
                             </tr>
                             @endforeach
-                            {{-- <td>Bitcoin</td>
-                            <td><img src="../assets/images/crypto-currencies/bitcoin.svg" alt="Bitcoin" class="w-4 h-4"></td>
-                            <td>$10513.00</td>
-                            <td class="text-red">-7%</td>
-                            <td>$179,470,305,923</td>
-                            <td>16,819,612 BTC</td>
-                            <td class="ight">$9,578,830,000</td>
-                            <td>8.11% / 57</td>
-                            <td>0.36%</td> --}}
                         </tbody>
                     </table>
                 </div>

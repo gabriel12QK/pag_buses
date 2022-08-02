@@ -6,11 +6,14 @@ use Livewire\Component;
 use App\Models\buses;
 use App\Models\parada;
 use App\Models\horario;
-
+use Livewire\WithPagination;
 //query builder
 use Illuminate\Support\Facades\DB;
 class Horariob extends Component
 {
+
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $frecuencia,$id_parada,$id_bus, $_id;
     public $button=true;
 
@@ -36,7 +39,7 @@ class Horariob extends Component
         ->join('buses','rutas.id','=','buses.id_ruta')
         ->join('horarios','buses.id','=','horarios.id_bus')
         ->join('paradas','horarios.id_parada','=','paradas.id')
-        ->select('rutas.nom_ruta as ruta','rutas.llegada as destino', 'paradas.nom_parada as parada','horarios.*')->get();
+        ->select('rutas.nom_ruta as ruta','rutas.llegada as destino', 'paradas.nom_parada as parada','horarios.*')->paginate(5);
         $p=parada::where('estado',1)->get();
         $bus=buses::where('estado',1)->get();
         return view('livewire.horariob', compact('p','bus','h'));
@@ -53,7 +56,7 @@ class Horariob extends Component
             //'paradas'=>$this->paradas=[],   
             //'estado'=>1,
         ]);
-
+        session()->flash('message', 'registro actualizado con exito.');
         $this->reset();
     }
 
@@ -76,8 +79,9 @@ class Horariob extends Component
             'id_bus'=>$this->id_bus,
              'id_parada'=> $this->id_parada,
         ]);
+        session()->flash('message', 'registro actualizado con exito.');
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+       
     }
 
     // public function destroyL($id){

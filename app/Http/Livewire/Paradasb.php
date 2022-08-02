@@ -4,9 +4,12 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\parada;
-
+use Livewire\WithPagination;
 class Paradasb extends Component
 {
+
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $nom_parada,$_id;
     public $button=true;
 
@@ -24,7 +27,7 @@ class Paradasb extends Component
 
     public function render()
     {
-        $p=parada::where('estado',1)->get();
+        $p=parada::where('estado',1)->paginate(5);
        return view('livewire.paradasb',compact('p'));
     }
 
@@ -36,6 +39,7 @@ class Paradasb extends Component
             'estado'=>1,
         ]);
         $this->reset();
+        session()->flash('message', 'registro guardado con exito.');
     }
 
     public function edit($id){
@@ -54,7 +58,7 @@ class Paradasb extends Component
             'estado' => 1,
         ]);
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+       session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function destroyL($id){

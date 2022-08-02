@@ -25,20 +25,26 @@
                                 
                                 @if ($button)
                                 <div class="form-group m-0 justify-content-center">
-                                    <button class="btn btn-primary bg-primary-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">registro de tipos</button>
+                                    <button class="btn btn-success bg-success-gradient mt-3" data-bs-toggle="modal" data-bs-target="#smallmodal" type="button">Tipos de Usuarios Registrados</button>
                                 </div>
-                                <button class="btn btn-primary mt-4 mb-0" type="submit">Registrar</button>
+                                <button class="btn btn-primary mt-4 mb-0" id="boton1" type="submit">Registrar</button>
                                 @else
                                 <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>
                                 @endif
                     
             </div>
         </div>
+        @if (session()->has('message'))
+        <div class="alert alert-success" role="alert">
+            <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+            <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
+        </div>
+       @endif
     </form>
     </div>
     {{-- MODAL PARA PARADAS --}}
  
-    <div class="modal  fade" id="smallmodal" tabindex="-1" role="dialog">
+    <div class="modal  fade" id="smallmodal" tabindex="-1" role="dialog" wire:ignore.self>
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -66,11 +72,12 @@
                                  <td>
                                     <div class="g-2">
                                       <a class="btn text-primary btn-sm" data-bs-dismiss="modal" data-bs-original-title="Edit" wire:click="edit({{$item->id}})"><span class="fe fe-edit fs-14"></span></a>
-                                       <a class="btn text-danger btn-sm"   data-bs-dismiss="modal" data-bs-original-title="Delete" wire:click="destroyL({{$item->id}})"><span class="fe fe-trash-2 fs-14"></span></a>
+                                       <a class="btn text-danger btn-sm" data-bs-original-title="Delete" wire:click="destroyL({{$item->id}})"><span class="fe fe-trash-2 fs-14"></span></a>
                                     </div>
                                     </td>
                                  </tr>
                                  @endforeach
+                                 {{$t->links()}}
                             </tbody>
                         </table>
                 </div>
@@ -78,3 +85,16 @@
         </div>
     </div> 
 </div>
+{{-- @include('plantilla.scrip')
+<script>
+    $("#boton1").click(function() {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se ha guardado con exito el registro',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    })
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}

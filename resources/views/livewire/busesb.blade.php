@@ -129,6 +129,12 @@
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>
                         @endif
                     </div>
+                    @if (session()->has('message'))
+                    <div class="alert alert-success" role="alert">
+                        <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+                        <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
+                    </div>
+                   @endif
                     </form>
                 </div>
             </div>
@@ -208,7 +214,7 @@
             </div>
 
 </div>
-@include('plantilla.scrip')
+{{-- @include('plantilla.scrip')
 <script>
     $("#boton1").click(function() {
         Swal.fire({
@@ -220,5 +226,5 @@
         })
     })
 </script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
 {{-- --}}

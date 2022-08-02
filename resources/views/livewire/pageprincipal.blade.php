@@ -10,11 +10,6 @@
                     Bienvenid@ a la forma mas facil y rapida de consultar los horarios
                     y paradas de los buses urbanos de la cuidad de calceta
                     </h4>
-                    {{-- <div class="main-header-center ms-2git d-none d-lg-block">
-                        <input type="text" class="form-control " id="typehead" placeholder="esatcion a consultar" wire:model="parada">
-                        <a href="{{url('estaciones'.$parada)}}"> <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" ><i class="fe fe-search" aria-hidden="true" ></i></button></a>
-                    </div> --}}
-                   
                 </div>
                 <div class="col-xl-6 col-lg-6 my-auto">
                     <img src="assets/images/media/termianlbus.gif" alt="">
@@ -25,32 +20,22 @@
                 <h3 class="fw-semibold mt-7">Busqueda Personalizada</h3>
                     @if ($button)
                     <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" wire:click="cambio">Buscar por ruta</button>
-                    <div class="form-group">
-                        <h4 class="fw-semibold mt-7">Busqueda por Paradas</h4>
-                        <div class="input-group">
-                            <a href="{{url('estaciones'.$parada)}}"> <button class="btn btn-primary" type="button" aria-placeholder="Estacion" id="button-addon1"><i class="fe fe-search" aria-hidden="true" ></i></button></a>
+                    <div class="form-group">                      
+                       <div class="input-group">
+                            <a href="{{url('estaciones'.$parada)}}"> <button class="btn btn-primary" type="button" aria-placeholder="Estacion" id="button-addon1">Buscar Parada</button></a>
                             <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" wire:model="parada">
                         </div>
                     </div>
                     @else
                     <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" wire:click="cambio">Buscar por paradas</button>
-                    {{-- <div class="main-header-center ms-2git d-none d-lg-block">
-                        <input type="text" class="form-control " id="typehead" placeholder="Ruta a consultar" wire:model="ruta">
-                        <a href="{{url('ruta-paradas'.$ruta)}}"> <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" ><i class="fe fe-search" aria-hidden="true" ></i></button></a>
-                    </div>  --}}
                     <div class="form-group">
-                        <h4 class="fw-semibold mt-7">Busqueda por Rutas</h4>
                         <div class="input-group">
-                            <a href="{{url('ruta-paradas'.$ruta)}}"> <button class="btn btn-primary" type="button" id="button-addon1"><i class="fe fe-search" aria-hidden="true" ></i></button></a>
+                            <a href="{{url('ruta-paradas'.$ruta)}}"> <button class="btn btn-primary" type="button" id="button-addon1">Buscar Ruta</button></a>
                             <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" placeholder="Ruta" aria-describedby="button-addon1" wire:model="ruta">
                         </div>
                     </div>
                     @endif
-            {{-- <div class="main-header-center ms-2git d-none d-lg-block">
-                <input type="text" class="form-control " id="typehead" placeholder="esatcion a consultar" wire:model="parada">
-                <a href="{{url('estaciones'.$parada)}}"> <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" ><i class="fe fe-search" aria-hidden="true" ></i></button></a>
-            </div> --}}
-           
+          
         </div>
         <div class="row">
             <h5 class="fw-semibold mb-4">Rutas</h5>

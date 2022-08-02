@@ -20,9 +20,7 @@ Bienvenidos a la pagina de buses
                             <div class="media-body ms-3 d-flex">
                                 <div class="">
                                     {{$item->nom_ruta}}
-                                    <p class="fs-15 text-dark fw-bold mb-0">{{$item->nom_parada}}</p>
-                                    <p class="mb-0 fs-13 text-dark">{{$item->frecuencia}}</p>
-                                    
+                                    <p class="fs-15 text-dark fw-bold mb-0">{{$item->nom_parada}}</p>                                    
                                 </div>
         
                             </div>
@@ -53,8 +51,10 @@ Bienvenidos a la pagina de buses
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($p as $item)
-                                    <tr>
+                                   
+                                     @foreach ($p as $item)
+                                     @if ($loop->first)
+                                     <tr>
                                         <td>Lunes</td>
                                         <td>{{$item->inicio}}</td>
                                         <td>{{$item->fin}}</td>
@@ -89,28 +89,9 @@ Bienvenidos a la pagina de buses
                                         <td>{{$item->inicio}}</td>
                                         <td>{{$item->fin}}</td>
                                     </tr>    
+                                     @endif
                                     @endforeach
-                                  
-                                {{-- <tr>
-                                    <td>Martes</td>
-                                    <td>{{$item->inicio}}</td>
-                                    <td>{{$item->fin}}</td>
-                                </tr>       
-                                <tr>
-                                    <td>Miercoles</td>
-                                    <td>{{$item->inicio}}</td>
-                                    <td>{{$item->fin}}</td>
-                                </tr>                     
-                                <tr>
-                                    <td>Jueves</td>
-                                    <td>{{$item->inicio}}</td>
-                                    <td>{{$item->fin}}</td>
-                                </tr>       
-                                <tr>
-                                    <td>Viernes</td>
-                                    <td>{{$item->inicio}}</td>
-                                    <td>{{$item->fin}}</td>
-                                </tr>        --}}
+                                   
                                 </tbody>
                             </table>
                         </div>

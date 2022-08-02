@@ -39,6 +39,7 @@ class Paradasb extends Component
             'estado'=>1,
         ]);
         $this->reset();
+        session()->flash('message', 'registro guardado con exito.');
     }
 
     public function edit($id){
@@ -57,7 +58,7 @@ class Paradasb extends Component
             'estado' => 1,
         ]);
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+       session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function destroyL($id){

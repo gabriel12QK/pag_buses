@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\cooperativa;
 use App\Models\persona;
 
+
 use Livewire\WithPagination;
 //query builder
 use Illuminate\Support\Facades\DB;
@@ -33,15 +34,22 @@ class Cooperativab extends Component
 
     public function render()
     {
-       // $coop=cooperativa::where('estado',1)->get();
+        //consulta para datos
         $coop=DB::table('cooperativas')
         ->join('personas','cooperativas.id_dueño','=','personas.id')
         ->select('cooperativas.*','personas.nom as nom','personas.CI as CI')
-        ->where( 'personas.CI', 'like', '%'.$this->cedula.'%' )
+        //->where( 'personas.CI', 'like', '%'.$this->cedula.'%' )
         -> where('cooperativas.estado',1)->paginate(5);
+        
+        // consulta para conteo
+        $b=DB::table('buses')
+        ->join('cooperativas','buses.id_coop','=','cooperativas.id')
+        ->selectRaw('count(buses.id) as cant, cooperativas.nom_coop')
+        ->groupBy('cooperativas.nom_coop')->where('buses.estado',1) 
+        -> get();
+      // dd($b);
         $p=persona::where('estado',1)->get();
-       
-        return view('livewire.cooperativab', compact('p','coop'));
+        return view('livewire.cooperativab', compact('p','coop','b'));
     }
     
     public function guardar()
@@ -52,7 +60,9 @@ class Cooperativab extends Component
             'id_dueño'=> $this->id_dueño,
             'estado'=>1,
         ]);
+        
         $this->reset();
+        session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function edit($id){
@@ -72,7 +82,7 @@ class Cooperativab extends Component
             'estado'=>1,
         ]);
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+        session()->flash('message', 'registro actualizado con exito.');
     }
 
     public function destroyL($id){

@@ -9,6 +9,7 @@
                     alt="logo">
             </a>
             <!-- LOGO -->
+            
             {{-- <div class="main-header-center ms-3 d-none d-lg-block">
                 <input type="text" class="form-control" id="typehead" placeholder="Search for results...">
                 <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>

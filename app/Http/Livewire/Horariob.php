@@ -56,7 +56,7 @@ class Horariob extends Component
             //'paradas'=>$this->paradas=[],   
             //'estado'=>1,
         ]);
-
+        session()->flash('message', 'registro actualizado con exito.');
         $this->reset();
     }
 
@@ -79,8 +79,9 @@ class Horariob extends Component
             'id_bus'=>$this->id_bus,
              'id_parada'=> $this->id_parada,
         ]);
+        session()->flash('message', 'registro actualizado con exito.');
         $this->reset();
-       // session()->flash('message', 'registro actualizado con exito.');
+       
     }
 
     // public function destroyL($id){

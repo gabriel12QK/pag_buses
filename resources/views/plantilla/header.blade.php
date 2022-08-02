@@ -14,7 +14,6 @@
                 <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
             </div> --}}
             <div class="d-flex order-lg-2 ms-auto header-right-icons">
-                <!-- SEARCH -->
                 
                              <!-- Theme-Layout -->
                             <div class="d-flex country">
@@ -38,29 +37,20 @@
 
                             <!-- MESSAGE-BOX -->
 
-                            <div class="dropdown d-flex profile-1">
+                            <div class="dropdown d-flex profile-1 ">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link leading-none d-flex">
                                     <img src="/assets/images/users/21.jpg" alt="profile-user"
-                                        class="avatar  profile-user brround cover-image">
+                                        class="avatar profile-user brround cover-image">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <div class="drop-heading">
                                         <div class="text-center">
-                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Percy Kewshun</h5>
-                                            <small class="text-muted">Senior Admin</small>
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Usuario</h5>
+                                            <small class="text-muted">Admin</small>
                                         </div>
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
-                                    <a class="dropdown-item" href="profile.html">
-                                        <i class="dropdown-icon fe fe-user"></i> Profile
-                                    </a>
-                                    <a class="dropdown-item" href="email-inbox.html">
-                                        <i class="dropdown-icon fe fe-mail"></i> Inbox
-                                        <span class="badge bg-danger rounded-pill float-end">5</span>
-                                    </a>
-                                    <a class="dropdown-item" href="lockscreen.html">
-                                        <i class="dropdown-icon fe fe-lock"></i> Lockscreen
-                                    </a>
+
                                     {{-- <a class="dropdown-item" href="login.html">
                                         <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
                                     </a> --}}
@@ -81,9 +71,29 @@
     </div>
 
 
-        <!-- BOOTSTRAP JS -->
-        <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JQUERY JS -->
+<script src="/assets/js/jquery.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- COUNTERS JS-->
+<script src="/assets/plugins/counters/counterup.min.js"></script>
+<script src="/assets/plugins/counters/waypoints.min.js"></script>
+<script src="/assets/plugins/counters/counters-1.js"></script>
+
+<!-- Perfect SCROLLBAR JS-->
+<script src="/assets/plugins/owl-carousel/owl.carousel.js"></script>
+<script src="/assets/plugins/company-slider/slider.js"></script>
+
+<!-- Star Rating Js-->
+<script src="/assets/plugins/rating/jquery-rate-picker.js"></script>
+<script src="/assets/plugins/rating/rating-picker.js"></script>
+
+<!-- Star Rating-1 Js-->
+<script src="/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+<script src="/assets/plugins/ratings-2/star-rating.js"></script>
     
 </div>
 

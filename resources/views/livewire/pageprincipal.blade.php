@@ -10,9 +10,9 @@
                     Bienvenid@ a la forma mas facil y rapida de consultar los horarios
                     y paradas de los buses urbanos de la cuidad de calceta
                     </h4>
-                    <div class="main-header-center ms-2git d-none d-lg-block">
+                    <div class="input-group mb-2" >
                         <input type="text" class="form-control " id="typehead" placeholder="esatcion a consultar" wire:model="parada">
-                        <a href="{{url('estaciones'.$parada)}}"> <button class="btn ripple btn-min w-lg mb-2 me-1 btn-primary" ><i class="fe fe-search" aria-hidden="true" ></i></button></a>
+                        <a href="{{url('estaciones'.$parada)}}"><span class="input-group-text btn btn-primary">Search</span></a>
                     </div>
                    
                 </div>
@@ -21,6 +21,10 @@
                 </div>
             </div>
         </div>
+
+
+
+
 
         <div class="row">
             <h5 class="fw-semibold mb-4">Rutas</h5>
@@ -79,35 +83,6 @@
             </div>
         </div>
  --}}
-
-
-
-
-
-<!-- JQUERY JS -->
-<script src="/assets/js/jquery.min.js"></script>
-
-<!-- BOOTSTRAP JS -->
-<script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
-<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- COUNTERS JS-->
-<script src="/assets/plugins/counters/counterup.min.js"></script>
-<script src="/assets/plugins/counters/waypoints.min.js"></script>
-<script src="/assets/plugins/counters/counters-1.js"></script>
-
-<!-- Perfect SCROLLBAR JS-->
-<script src="/assets/plugins/owl-carousel/owl.carousel.js"></script>
-<script src="/assets/plugins/company-slider/slider.js"></script>
-
-<!-- Star Rating Js-->
-<script src="/assets/plugins/rating/jquery-rate-picker.js"></script>
-<script src="/assets/plugins/rating/rating-picker.js"></script>
-
-<!-- Star Rating-1 Js-->
-<script src="/assets/plugins/ratings-2/jquery.star-rating.js"></script>
-<script src="/assets/plugins/ratings-2/star-rating.js"></script>
-
 
 
 </div>

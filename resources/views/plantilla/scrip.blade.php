@@ -57,6 +57,8 @@
 
     <!-- INTERNAL Bootstrap-Datepicker js-->
     <script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+       <!-- INTERNAL Bootstrap-Datepicker js-->
+       <script src="../assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
 
     <!-- TIMEPICKER JS -->
     <script src="../assets/plugins/time-picker/jquery.timepicker.js"></script>

@@ -17,7 +17,7 @@
                     <div class="form-floating floating-label">
                         <div class="form-group">
                             <label class="form-label">Bus</label>
-                            <select class="form-control select2" data-placeholder="Choose one " wire:model="id_bus">
+                            <select class="form-control " data-placeholder="Choose one " wire:model="id_bus">
                                 <option >seleccionar....</option>
                                 @foreach ($bus as $item)
                                <option value="{{$item->id}}" >{{$item->matricula}}</option>
@@ -39,7 +39,7 @@
                     <div class="form-floating floating-label">
                         <div class="form-group">
                             <label class="form-label">Paradas</label>
-                            <select class="form-control select2" data-placeholder="Choose one " wire:model="id_parada">
+                            <select class="form-control "  wire:model="id_parada">
                                 <option >seleccionar...</option>
                                 @foreach ($p as $item2)
                                
@@ -58,16 +58,26 @@
                 </div>
 
                         <div class="form-group">
-                            <label>Hora de llegada</label>
+                            <label>Default Time Picker:</label>
                             <div class="wd-150 mg-b-30">
                                 <div class="input-group">
                                     <div class="input-group-text">
                                         <i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
                                     </div>
                                     <!-- input-group-text -->
-                                    <input class="form-control"  value ="<?php date("H:i:s"); ?>" placeholder="00:00am" type="text" wire:model="frecuencia">
+                                    <input class="form-control" id="tpBasic" value ="<?php date("H:i:s"); ?>" placeholder="Set time" type="text" wire:model="frecuencia">
                                 </div>
                             </div>
+                            {{-- <label>Hora de llegada</label>
+                            <div class="wd-150 mg-b-30">
+                                <div class="input-group">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
+                                    </div>
+                                    <!-- input-group-text -->
+                                    <input class="form-control"   placeholder="00:00am" type="text" >
+                                </div>
+                            </div> --}}
                             @error('frecuencia')
                             <div class="alert alert-danger mb-0" role="alert">
                                 <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>

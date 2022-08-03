@@ -19,7 +19,7 @@ class Busesb extends Component
    protected $paginationTheme = 'bootstrap';
 
   protected $rules = [
-    'matricula' => 'required|unique:buses,matricula',
+    'matricula' => 'required',
     'modelo' => 'required',
     'capacidad' => 'required|numeric',
    'numero' => 'required|numeric',
@@ -29,7 +29,7 @@ class Busesb extends Component
 ];
 protected $messages = [
     'matricula.required' => 'campo requerido',
-    'matricula.unique' => 'matricula existente',
+
     'capacidad.required' => 'campo requerido',
     'numero.required' => 'campo requerido',
     'numero.numeric' => 'solo se permiten numeros',

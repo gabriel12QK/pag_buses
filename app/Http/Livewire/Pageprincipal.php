@@ -25,9 +25,10 @@ class Pageprincipal extends Component
         $p=DB::table('rutas')
         ->join('buses','rutas.id','=','buses.id_ruta')
         ->join('horarios','buses.id','=','horarios.id_bus')
+    
         ->join('paradas','horarios.id_parada','=','paradas.id')
         ->select('rutas.nom_ruta','rutas.inicio','rutas.fin' ,'paradas.nom_parada')
-        ->groupBy('paradas.nom_parada', 'rutas.inicio', 'rutas.fin', 'rutas.nom_ruta')
+        ->groupBy('paradas.nom_parada', 'rutas.inicio', 'rutas.fin', 'rutas.nom_ruta','ruta.llegada')
         ->where('rutas.nom_ruta',$ruta)->get();
 
         return view('livewire.rutas-p', compact('p'));
@@ -38,9 +39,10 @@ class Pageprincipal extends Component
        
         $p=DB::table('rutas')
         ->join('buses','rutas.id','=','buses.id_ruta')
+        ->join('cooperativas','buses.id_coop','=','cooperativas.id')
         ->join('horarios','buses.id','=','horarios.id_bus')
         ->join('paradas','horarios.id_parada','=','paradas.id')
-        ->select('rutas.*', 'paradas.*','horarios.frecuencia')
+        ->select('rutas.*', 'paradas.*','horarios.frecuencia','cooperativas.nom_coop','buses.numero')
         ->orderBy('horarios.frecuencia', 'asc')
         ->where('paradas.nom_parada',$parada)->get();
         return view('livewire.estaciones', compact('p'));

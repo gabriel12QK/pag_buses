@@ -13,7 +13,7 @@ class Rutasb extends Component
     public $button=true;
     
     protected $rules = [
-        'nom_ruta' => 'required|unique:rutas,nom_ruta',
+        'nom_ruta' => 'required',
         'inicio' => 'required',
         'fin' => 'required',
         'salida' => 'required',
@@ -22,7 +22,6 @@ class Rutasb extends Component
     ];
     protected $messages = [
         'nom_ruta.required' => 'campo requerido',
-        'nom_ruta.unique' => 'ya existe una ruta con este nombre',
         'inicio.required' => 'campo requerido',
         'fin.required' => 'campo requerido',
         'salida.required' => 'campo requerido',

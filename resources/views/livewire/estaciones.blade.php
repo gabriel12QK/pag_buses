@@ -1,13 +1,13 @@
 @extends('layaouts.app')
 @section('header-title')
-Bienvenidos a la pagina de buses
+
 @endsection
 @section('contenido')
 <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Crypto Currencies</h3>
+                <h3 class="card-title">Busqueda por parada</h3>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -18,6 +18,8 @@ Bienvenidos a la pagina de buses
                                 <th class="bg-transparent border-bottom-0 w-5">Estacion</th>
                                 <th class="bg-transparent border-bottom-0">llegada</th>
                                 <th class="bg-transparent border-bottom-0">Ruta</th>
+                                <th class="bg-transparent border-bottom-0">Llegada</th>
+                                <th class="bg-transparent border-bottom-0">Bus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,6 +29,8 @@ Bienvenidos a la pagina de buses
                                 <td>{{$item->nom_parada}}</td>
                                 <td>{{$item->frecuencia}}</td>
                                 <td>{{$item->nom_ruta}}</td>
+                                <td>{{$item->llegada}}</td>
+                                <td>{{$item->nom_coop}} {{$item->numero}}</td>
                             </tr>
                             @endforeach
                         </tbody>

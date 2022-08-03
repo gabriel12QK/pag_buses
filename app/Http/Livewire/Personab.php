@@ -18,7 +18,7 @@ class Personab extends Component
     protected $rules = [
         'nom' => 'required',
         'ape' => 'required',
-        'CI' => 'required|min:10|numeric|unique:personas,CI',
+        'CI' => 'required|min:10|numeric',
         'telf' => 'required|min:10|numeric',
         'id_tipo' => 'required',
     ];
@@ -28,7 +28,6 @@ class Personab extends Component
         'CI.required' => 'campo requerido',
         'CI.min' => 'minimo 10 caracteres',
         'CI.numeric' => 'solo se permiten numeros',
-        'CI.unique' => 'numero de cedula existente',
         'telf.required' => 'campo requerido',
         'telf.min' => 'minimo 10 caracteres',
         'telf.numeric' => 'solo se permiten numeros',

@@ -1,4 +1,72 @@
 <div>
+
+
+    <div class="section testimonial-owl-landing">
+        <div class="container">
+            <div class="row">
+                <div class="card bg-transparent mb-0">
+                    <h1 class="text-center fw-semibold text-white">Herramientas</h1>
+                    <span class="landing-title"></span>
+                    <div class="demo-screen-skin code-quality" id="dependencies">
+                        <div class="text-center p-0">
+                            <h2 class="text-center fw-semibold text-white">Tecnologías Utilizadas para el proyecto</h2>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 px-0">
+                                    <div class="feature-logos mt-5">
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/bootstrap-stack.png">
+                                            <h5 class="mt-3 text-white">Bootstrap5</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/Html5.png">
+                                            <h5 class="mt-3 text-white">HTML5</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/mysql.jpg">
+                                            <h5 class="mt-3 text-white">MySQL</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/php.png">
+                                            <h5 class="mt-3 text-white">php</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/Apachelogo.png">
+                                            <h5 class="mt-3 text-white">Apache</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/Laravel.png">
+                                            <h5 class="mt-3 text-white">Laravel</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/Livewire.png">
+                                            <h5 class="mt-3 text-white">Livewire</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/npm.png">
+                                            <h5 class="mt-3 text-white">npm</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/GitHub.png">
+                                            <h5 class="mt-3 text-white">GitHub</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/visual-studio-code.svg">
+                                            <h5 class="mt-3 text-white">Visual Studio Code</h5>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="../assets/images/landing/web/sash.png">
+                                            <h5 class="mt-3 text-white">Sash</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ROW-1 OPEN-->
     <div class="row">
         <div class="col-lg-12">
@@ -16,8 +84,8 @@
                     <div class="item-box text-center">
                         <div class=" text-center  mb-4 text-primary"><i class="icon icon-people"></i></div>
                         <div class="item-box-wrap">
-                            <h5 class="mb-2">Creative solutions</h5>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                            <h5 class="mb-2">Facil uso</h5>
+                            <p class="text-muted mb-0">Con el sistema se puede visualizar y consultar desde cualquier parte la información más importante y necesaria</p>
                         </div>
                     </div>
                 </div>
@@ -29,8 +97,8 @@
                     <div class="item-box text-center">
                         <div class=" text-center text-danger-gradient mb-4"><i class="icon icon-clock"></i></div>
                         <div class="item-box-wrap">
-                            <h5 class="mb-2">Trace your time</h5>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                            <h5 class="mb-2">Menos Tiempo</h5>
+                            <p class="text-muted mb-0">Se reduce el tiempo en buscar información para los usuarios finales, como también en administrar y organizar para los trabajadores.</p>
                         </div>
                     </div>
                 </div>
@@ -42,8 +110,8 @@
                     <div class="item-box text-center">
                         <div class=" text-center text-success mb-4"><i class="fa fa-building-o"></i></div>
                         <div class="item-box-wrap">
-                            <h5 class="mb-2">Business FrameWork</h5>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                            <h5 class="mb-2">Administración</h5>
+                            <p class="text-muted mb-0">Con el uso del sistema se tiene una fácil administración y organización y escalabilidad del mismo</p>
                         </div>
                     </div>
                 </div>
@@ -53,10 +121,10 @@
             <div class="card service">
                 <div class="card-body">
                     <div class="item-box text-center">
-                        <div class="text-center text-warning-gradient mb-4"><i class="icon icon-action-redo"></i></div>
+                        <div class="text-center text-warning-gradient mb-4"><i class="icon icon-organization"></i></div>
                         <div class="item-box-wrap">
-                            <h5 class="mb-2">Shares</h5>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+                            <h5 class="mb-2">Centralización</h5>
+                            <p class="text-muted mb-0">Todo centralizado para un mejor mantenimiento y sostenibilidad del proyecto</p>
                         </div>
                     </div>
                 </div>
@@ -86,65 +154,15 @@
           </div>
           <!-- ROW-2 CLOSED -->
     
-          <!-- ROW-3 OPEN -->
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="card mt-7">
-                      <div class="card-body p-5 text-dark">
-                          <div class="statistics-info p-4">
-                              <div class="row">
-                                  <div class="col-xl-6">
-                                      <div class="">
-                                        <br>
-                                        <br>
-    
-                                          <h2 class="fw-bold">EL Proyecto <span class="text-primary">SBUC</span></h2>
-                                          <h4 class="leading-normal">Grupo 3</h4>
-                                          <p>Realizar sistema web utilizando tecnologías open donde se pueda crear horarios de
-                                            transporte.
-                                            Se necesita saber:
-                                            
-                                            <p>El horario de los buses de manera semanal y diaria (ruta de partida, rutas de
-                                                trayecto, ruta destino, hora de salida y de llegada o).
-                                                </p> 
-                                                <p>Los datos del chofer, del vehículo(asientos) y la compañía de un determinado
-                                                    bus.</p>
-                                            
-                                                
-                                      </div>
-                                  </div>
-                                  <div class="col-xl-5">
-                                      <div class="text-center">
-                                          <img src="../assets/images/media/buss.png" alt="">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-    
-          <div class="card-header">
-            <h3 class="card-title">Lista de objetivos a cumplir</h3>
-        </div>
-        <div class="card-body">
-            <div class="">
-                <ul class="list-group">
-                    <li class="list-group-item"><i class="fa fa-check text-muted me-2" aria-hidden="true"></i> Emplear un inicio de sesión.</li>
-                    <li class="list-group-item"><i class="fa fa-check text-muted me-2" aria-hidden="true"></i> Listar horarios por día</li>
-                    <li class="list-group-item"><i class="fa fa-check text-muted me-2" aria-hidden="true"></i> Buscar buses por rutas de trayecto, también se deberá mostrar la hora en que pasará por
-                        dicho lugar.</li>
-                    <li class="list-group-item"><i class="fa fa-check text-muted me-2" aria-hidden="true"></i> Buscar cooperativa de transporte por cédula del dueño.</li>
-                    <li class="list-group-item"><i class="fa fa-check text-muted me-2" aria-hidden="true"></i> Validar datos de ingreso</li>
-                </ul>
-            </div>
-        </div>
-          <!-- ROW-3 CLOSED -->
-    
+          
     
     </div>
     
-    </div>
-    
+      <!-- Perfect SCROLLBAR JS-->
+      <script src="../assets/plugins/owl-carousel/owl.carousel.js"></script>
+      <script src="../assets/plugins/company-slider/slider.js"></script>
+
+  
+      <!-- CUSTOM JS -->
+      <script src="../assets/js/landing.js"></script>
 </div>

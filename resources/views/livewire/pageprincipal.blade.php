@@ -64,21 +64,23 @@
 
 
         <div class="row">
-            <h5 class="fw-semibold mb-4">Rutas</h5>
+            <h5 class="fw-semibold mb-3">Rutas</h5>
             @foreach ($r as $item)
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-4 col-md-6">
                 <div class="card">
                     <span class="ribbone-success-left">
                         <span><i class="fa fa-bus"></i></span>
                     </span>
                     <div class="card-body  p-6">
-                        <h6 class="card-subtitle mb-2 text-dark fw-bold text-end"  >{{$item->nom_ruta}}</h6>
+                        <h5 class="card-subtitle mb-2 text-blue fw-bold text-end"  >{{$item->nom_ruta}}</h5>
                         {{-- <input type="text" wire:model="ruta">
                         <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a> --}}
-                        <h4>Lugar de salida <i class="fa fa-map-marker"></i></h4>
-                        <h5>{{$item->salida}}</h5>
-                        <h4>Lugar de llegada <i class="fa fa-map-pin"></i></h4>
-                        <h5>{{$item->llegada}}</h5>
+                        <h4>Lugar de salida  <span class="text-yellow"><i
+                            class="fa fa-map-marker text-yellow"></i></span></h4>
+                        <h5 class="text-green">{{$item->salida}}</h5>
+                        <h4>Lugar de llegada <span class="text-yellow"><i
+                            class="fa fa-map-pin text-yellow"></i></span></h4>
+                        <h5 class="text-green">{{$item->llegada}}</h5>
                     </div>
                 </div>
             </div>

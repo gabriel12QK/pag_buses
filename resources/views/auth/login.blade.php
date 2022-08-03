@@ -4,13 +4,14 @@
 <div class="col col-login mx-auto mt-7">
     <div class="col col-login mx-auto mt-7">
         <div class="text-center">
-            <a href="index.html"><img src="../assets/images/brand/logo-white.png" class="header-brand-img" alt=""></a>
+            <a href="index.html"><img src="../assets/images/brand/SBUC.png" class="header-brand-img" alt=""></a>
         </div>
     </div>
     <div class="container-login100">
         <div class="col-md-6">
             <div class="card">
-                <span class="login100-form-title pb-5">
+                <br>
+                <span class="login100-form-title pb-2">
                     Inicio de sesion
                 </span>
                 <div class="card-body">
@@ -59,16 +60,10 @@
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                         <div class="text-center pt-3">

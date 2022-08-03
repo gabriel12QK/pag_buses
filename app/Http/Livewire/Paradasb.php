@@ -14,11 +14,10 @@ class Paradasb extends Component
     public $button=true;
 
     protected $rules = [
-        'nom_parada' => 'required|unique:paradas,nom_parada',
+        'nom_parada' => 'required',
     ];
     protected $messages = [
         'nom_parada.required' => 'campo requerido',
-        'nom_parada.unique' => 'esta parada ya se encuentra registrada',
 
     ];
     public function updated($propertyName)

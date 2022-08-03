@@ -20,13 +20,12 @@ class Cooperativab extends Component
     protected $queryString = ['cedula'];
 
     protected $rules = [
-        'nom_coop' => 'required|unique:cooperativas,nom_coop',
+        'nom_coop' => 'required',
         'id_dueño' => 'required',
     ];
     protected $messages = [
         'nom_coop.required' => 'campo requerido',
         'id_dueño.required' => 'campo requerido',
-        'nom_coop.unique' => 'Cooperativa existente',
     ];
     public function updated($propertyName)
     {

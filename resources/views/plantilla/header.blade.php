@@ -9,11 +9,6 @@
                     alt="logo">
             </a>
             <!-- LOGO -->
-            
-            {{-- <div class="main-header-center ms-3 d-none d-lg-block">
-                <input type="text" class="form-control" id="typehead" placeholder="Search for results...">
-                <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
-            </div> --}}
             <div class="d-flex order-lg-2 ms-auto header-right-icons">
                 
                              <!-- Theme-Layout -->
@@ -46,8 +41,8 @@
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <div class="drop-heading">
                                         <div class="text-center">
-                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Usuario</h5>
-                                            <small class="text-muted">Admin</small>
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">{{ Auth::user()->name }}</h5>
+                                            <small class="text-muted"></small>
                                         </div>
                                     </div>
                                     <div class="dropdown-divider m-0"></div>

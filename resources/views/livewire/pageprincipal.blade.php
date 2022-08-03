@@ -73,14 +73,15 @@
                     </span>
                     <div class="card-body  p-6">
                         <h5 class="card-subtitle mb-2 text-blue fw-bold text-end"  >{{$item->nom_ruta}}</h5>
-                        {{-- <input type="text" wire:model="ruta">
-                        <a href="{{url('ruta-paradas'.$ruta)}}"> prueba</a> --}}
-                        <h4>Lugar de salida  <span class="text-yellow"><i
+                        <h4>Lugar de salida <span class="text-yellow"><i
                             class="fa fa-map-marker text-yellow"></i></span></h4>
                         <h5 class="text-green">{{$item->salida}}</h5>
                         <h4>Lugar de llegada <span class="text-yellow"><i
                             class="fa fa-map-pin text-yellow"></i></span></h4>
                         <h5 class="text-green">{{$item->llegada}}</h5>
+                        <h4>Duracion <span class="text-yellow"><i
+                            class="fa fa-safari text-yellow"></i></span></h4>
+                        <h5 class="text-indigo">{{$item->recorrido}}</h5>
                     </div>
                 </div>
             </div>

@@ -40,16 +40,9 @@ class Pageprincipal extends Component
         ->join('buses','rutas.id','=','buses.id_ruta')
         ->join('horarios','buses.id','=','horarios.id_bus')
         ->join('paradas','horarios.id_parada','=','paradas.id')
-        ->select('rutas.*', 'paradas.*','horarios.*')
+        ->select('rutas.*', 'paradas.*','horarios.frecuencia')
+        ->orderBy('horarios.frecuencia', 'asc')
         ->where('paradas.nom_parada',$parada)->get();
         return view('livewire.estaciones', compact('p'));
-    }
-
-    Public function cambio(){
-        if($this->button==true)
-        $this->button=false;
-        else{
-            $this->button=true;
-        }
     }
 }

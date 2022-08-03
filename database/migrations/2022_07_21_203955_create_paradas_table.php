@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('paradas', function (Blueprint $table) {
             $table->id();
             $table->boolean('estado');
-            $table->string('nom_parada');
+            $table->string('nom_parada')->unique();
            
           // $table->timestamps();
         });

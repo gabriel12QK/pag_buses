@@ -3,7 +3,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Formulario para buses</h4>
+                <h4 class="card-title">Registrar buses</h4>
             </div>
             <div class="card-body">
                 @if ($button)
@@ -12,11 +12,27 @@
                 <form wire:submit.prevent="update"> 
                 @endif
                     <div class="row">
+                        @if (session()->has('message'))
+                        <div class="alert alert-success" role="alert">
+                            <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+                            <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
+                        </div>
+                       @endif
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="form-label">Matricula</label>
                                 <input type="text" class="form-control" wire:model="matricula" >
                                 @error('matricula')
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text">{{ $message }} </span>
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="form-label">Número</label>
+                                <input type="text" class="form-control" wire:model="numero" >
+                                @error('numero')
                                 <div class="alert alert-danger mb-0" role="alert">
                                     <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
                                     <span class="alert-inner--text">{{ $message }} </span>
@@ -56,9 +72,9 @@
                                         <select class="form-control select2" data-placeholder="Choose one " wire:model="id_chofer">
                                             <option >seleccionar</option>
                                             @foreach ($chofer as $item)
-                                           @if ($item->id_tipo == 2)
+                                          
                                            <option value="{{$item->id}}" >{{$item->nom}}</option>
-                                           @endif
+                                         
                                            @endforeach
                                             </select>
                                     </div>
@@ -129,12 +145,6 @@
                         <button class="btn btn-primary mt-4 mb-0" type="submit">Actualizar</button>
                         @endif
                     </div>
-                    @if (session()->has('message'))
-                    <div class="alert alert-success" role="alert">
-                        <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
-                        <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
-                    </div>
-                   @endif
                     </form>
                 </div>
             </div>
@@ -156,6 +166,7 @@
                                 <thead class="border-top">
                                   <tr>
                                         <th class="bg-transparent border-bottom-0">Matricula</th>
+                                        <th class="bg-transparent border-bottom-0">N°</th>
                                         <th class="bg-transparent border-bottom-0">Modelo</th>
                                         <th class="bg-transparent border-bottom-0">Capacidad</th>
                                         <th class="bg-transparent border-bottom-0">Cooperativa</th>
@@ -172,6 +183,11 @@
                                               <h6 class="mb-0 fs-14 fw-semibold"> {{$item->matricula}}</h6>
                                           </div>
                                       </td>
+                                      <td>
+                                        <div class="mt-0 mt-sm-2 d-block">
+                                            <h6 class="mb-0 fs-14 fw-semibold"> {{$item->numero}}</h6>
+                                        </div>
+                                    </td>
                                       <td>
                                           <div class="mt-0 mt-sm-2 d-block">
                                               <h6 class="mb-0 fs-14 fw-semibold"> {{$item->modelo}}</h6>

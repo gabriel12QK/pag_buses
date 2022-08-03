@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
-            $table->string('matricula');
+            $table->string('matricula')->unique();
             $table->string('modelo');
+            $table->integer('numero');
             $table->integer('capacidad');
             $table->boolean('estado');
            $table->foreignId('id_chofer')->constrained('personas');

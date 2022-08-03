@@ -10,6 +10,12 @@
                 <h4 class="card-title">Registrar Personas </h4>
             </div>
             <div class="card-body">
+                @if (session()->has('message'))
+        <div class="alert alert-success" role="alert">
+            <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+            <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
+        </div>
+       @endif
                 <div class="form-group">
                     <label for="exampleInputEmail1" class="form-label">Nombre</label>
                     <input type="text" class="form-control" wire:model="nom">
@@ -82,12 +88,7 @@
                 @endif
             </div>
         </div>
-        @if (session()->has('message'))
-        <div class="alert alert-success" role="alert">
-            <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
-            <span class="alert-inner--text"><strong>Success!</strong> {{ session('message') }} </span>
-        </div>
-       @endif
+        
         </form>
     </div>
 

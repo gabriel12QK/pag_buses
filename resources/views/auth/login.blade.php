@@ -4,7 +4,7 @@
 <div class="col col-login mx-auto mt-7">
     <div class="col col-login mx-auto mt-7">
         <div class="text-center">
-            <a href="index.html"><img src="../assets/images/brand/SBUC.png" class="header-brand-img" alt=""></a>
+            <img src="../assets/images/brand/SBUC.png" class="header-brand-img" alt="">
         </div>
     </div>
     <div class="container-login100">

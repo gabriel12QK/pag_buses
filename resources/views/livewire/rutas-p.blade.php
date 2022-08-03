@@ -11,6 +11,27 @@ Bienvenidos a la pagina de buses
         <div class="container">
             <ul class="notification">
                 @foreach ($p as $item)
+                @if ($loop->first)
+                <li>
+                    <div class="notification-icon">
+                        <a href="javascript:void(0);"></a>
+                    </div>
+                    <div class="notification-body">
+                        <div class="media mt-0">
+                            <div class="media-body ms-3 d-flex">
+                                <div class="">
+                                    {{$item->nom_ruta}}
+                                    <p class="fs-15 text-dark fw-bold mb-0">Partida: {{$item->salida}} </p>   
+                                    <p class="fs-15 text-dark fw-bold mb-0"></p>                                    
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+                @endif
+                @endforeach
+                @foreach ($p as $item)
                 <li>
                     <div class="notification-icon">
                         <a href="javascript:void(0);"></a>
@@ -27,6 +48,27 @@ Bienvenidos a la pagina de buses
                         </div>
                     </div>
                 </li>
+                @endforeach
+                @foreach ($p as $item)
+                @if ($loop->first)
+                <li>
+                    <div class="notification-icon">
+                        <a href="javascript:void(0);"></a>
+                    </div>
+                    <div class="notification-body">
+                        <div class="media mt-0">
+                            <div class="media-body ms-3 d-flex">
+                                <div class="">
+                                    {{$item->nom_ruta}}
+                                    <p class="fs-15 text-dark fw-bold mb-0">Destino: {{$item->llegada}}</p>   
+                                    <p class="fs-15 text-dark fw-bold mb-0"></p>                                    
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+                @endif
                 @endforeach
                 
         </div>

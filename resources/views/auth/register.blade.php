@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center">
-                <a href="index.html"><img src="../assets/images/brand/SBUC.png" class="header-brand-img" alt=""></a>
+                <img src="../assets/images/brand/SBUC.png" class="header-brand-img" alt="">
             </div>
             <div class="card">
                 <div class="card-header">{{ __('Registrarme') }}</div>

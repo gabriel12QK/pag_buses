@@ -27,10 +27,10 @@ class Pageprincipal extends Component
         ->join('horarios','buses.id','=','horarios.id_bus')
     
         ->join('paradas','horarios.id_parada','=','paradas.id')
-        ->select('rutas.nom_ruta','rutas.inicio','rutas.fin' ,'paradas.nom_parada')
-        ->groupBy('paradas.nom_parada', 'rutas.inicio', 'rutas.fin', 'rutas.nom_ruta','rutas.llegada')
+        ->select('rutas.nom_ruta','rutas.inicio','rutas.fin' ,'paradas.nom_parada','rutas.llegada','rutas.salida')
+        ->groupBy('paradas.nom_parada', 'rutas.inicio', 'rutas.fin', 'rutas.nom_ruta','rutas.llegada','rutas.salida')
         ->where('rutas.nom_ruta',$ruta)->get();
-
+       // dd($p);
         return view('livewire.rutas-p', compact('p'));
     }
 

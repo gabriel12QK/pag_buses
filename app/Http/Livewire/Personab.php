@@ -18,7 +18,7 @@ class Personab extends Component
     protected $rules = [
         'nom' => 'required',
         'ape' => 'required',
-        'CI' => 'required|min:10|numeric',
+        'CI' => 'required|min:10|numeric|unique:personas,CI',
         'telf' => 'required|min:10|numeric',
         'id_tipo' => 'required',
     ];
@@ -28,6 +28,7 @@ class Personab extends Component
         'CI.required' => 'campo requerido',
         'CI.min' => 'minimo 10 caracteres',
         'CI.numeric' => 'solo se permiten numeros',
+        'CI.unique' => 'numero de cedula existente',
         'telf.required' => 'campo requerido',
         'telf.min' => 'minimo 10 caracteres',
         'telf.numeric' => 'solo se permiten numeros',
@@ -46,7 +47,6 @@ class Personab extends Component
         $p=DB::table('personas')
         ->join('tipos','personas.id_tipo','=','tipos.id')
         ->select('personas.*','tipos.tipo')
-        //->where( 'personas.CI', 'like', '%'.$this->buscar.'%')
         -> where('personas.estado',1)->paginate(5);
         $t=tipo::where('estado',1)->get();
         return view('livewire.personab', compact('p','t'));

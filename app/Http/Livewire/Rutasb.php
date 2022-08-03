@@ -9,22 +9,25 @@ class Rutasb extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
-    public $nom_ruta, $inicio, $fin,$salida,$llegada,$_id;
+    public $nom_ruta, $inicio, $fin,$salida,$llegada,$recorrido,$_id;
     public $button=true;
     
     protected $rules = [
-        'nom_ruta' => 'required',
+        'nom_ruta' => 'required|unique:rutas,nom_ruta',
         'inicio' => 'required',
         'fin' => 'required',
         'salida' => 'required',
         'llegada' => 'required',
+        'recorrido' => 'required',
     ];
     protected $messages = [
         'nom_ruta.required' => 'campo requerido',
+        'nom_ruta.unique' => 'ya existe una ruta con este nombre',
         'inicio.required' => 'campo requerido',
         'fin.required' => 'campo requerido',
         'salida.required' => 'campo requerido',
         'llegada.required' => 'campo requerido',
+        'recorrido.required' => 'campo requerido',
     ];
     public function updated($propertyName)
     {
@@ -43,6 +46,7 @@ class Rutasb extends Component
             'nom_ruta' => $this->nom_ruta,
             'salida' => $this->salida,
             'llegada' => $this->llegada,
+            'recorrido' => $this->recorrido,
            'inicio'=>$this->inicio,
             'fin'=> $this->fin,
             'estado'=>1,
@@ -57,6 +61,7 @@ class Rutasb extends Component
         $this->nom_ruta=$ruta->nom_ruta;
         $this->salida=$ruta->salida;
         $this->llegada=$ruta->llegada;
+        $this->recorrido=$ruta->recorrido;
         $this->inicio=$ruta->inicio;
         $this->fin=$ruta->fin;
         $this->button = false;
@@ -70,6 +75,7 @@ class Rutasb extends Component
         'nom_ruta' => $this->nom_ruta,
         'salida' => $this->salida,
         'llegada' => $this->llegada,
+        'recorrido' => $this->recorrido,
        'inicio'=>$this->inicio,
         'fin'=> $this->fin,
         'estado'=>1,

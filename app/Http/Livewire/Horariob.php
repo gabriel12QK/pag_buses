@@ -41,7 +41,10 @@ class Horariob extends Component
         ->join('paradas','horarios.id_parada','=','paradas.id')
         ->select('rutas.nom_ruta as ruta','rutas.llegada as destino', 'paradas.nom_parada as parada','horarios.*')->paginate(5);
         $p=parada::where('estado',1)->get();
-        $bus=buses::where('estado',1)->get();
+        $bus=DB::table('buses')
+        ->join('cooperativas','buses.id_coop','=','cooperativas.id')
+        ->select('buses.*','cooperativas.nom_coop')
+        ->where('buses.estado',1)->get();
         return view('livewire.horariob', compact('p','bus','h'));
     }
 
@@ -51,10 +54,8 @@ class Horariob extends Component
         horario::create([
             'frecuencia' => $this->frecuencia,
            'id_bus'=>$this->id_bus,
-            'id_parada'=> $this->id_parada,
-            
-            //'paradas'=>$this->paradas=[],   
-            //'estado'=>1,
+            'id_parada'=> $this->id_parada,  
+            'estado'=>1,
         ]);
         session()->flash('message', 'registro actualizado con exito.');
         $this->reset();

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timeTz('frecuencia', $precision = 0);
             $table->foreignId('id_parada')->constrained('paradas');
             $table->foreignId('id_bus')->constrained('buses');
+            $table->boolean('estado');
            // $table->timestamps();
         });
     }

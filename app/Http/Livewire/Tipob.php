@@ -13,10 +13,11 @@ class Tipob extends Component
     public $button=true;
 
     protected $rules = [
-        'tipo' => 'required',
+        'tipo' => 'required|unique:tipos,tipo',
     ];
     protected $messages = [
         'tipo.required' => 'campo requerido',
+        'tipo.unique' => 'ya existe esta clase de tipo',
     ];
     public function updated($propertyName)
     {

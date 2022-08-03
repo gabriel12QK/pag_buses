@@ -10,5 +10,5 @@ class horario extends Model
     use HasFactory;
     protected $table= 'horarios';
     public $timestamps =false;
-     public $fillable = ['frecuencia','id_bus','id_parada'];
+     public $fillable = ['frecuencia','id_bus','id_parada','estado'];
 }

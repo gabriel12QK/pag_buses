@@ -20,12 +20,13 @@ class Cooperativab extends Component
     protected $queryString = ['cedula'];
 
     protected $rules = [
-        'nom_coop' => 'required',
+        'nom_coop' => 'required|unique:cooperativas,nom_coop',
         'id_dueño' => 'required',
     ];
     protected $messages = [
         'nom_coop.required' => 'campo requerido',
         'id_dueño.required' => 'campo requerido',
+        'nom_coop.unique' => 'Cooperativa existente',
     ];
     public function updated($propertyName)
     {
@@ -48,7 +49,12 @@ class Cooperativab extends Component
         ->groupBy('cooperativas.nom_coop')->where('buses.estado',1) 
         -> get();
       // dd($b);
-        $p=persona::where('estado',1)->get();
+        $p=DB::table('personas')
+        ->join('tipos','personas.id_tipo','=','tipos.id')
+        ->select('tipos.*','personas.*')
+        ->where('tipos.tipo',"dueño")
+        ->where('personas.estado',1)->get();
+      //  $=persona::where('estado',1)->get();
         return view('livewire.cooperativab', compact('p','coop','b'));
     }
     

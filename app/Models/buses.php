@@ -10,5 +10,5 @@ class buses extends Model
     use HasFactory;
     protected $table= 'buses';
     public $timestamps =false;
-     public $fillable = ['matricula','modelo','estado','capacidad','id_chofer','id_coop','id_ruta'];
+     public $fillable = ['matricula','modelo','estado','capacidad','id_chofer','id_coop','id_ruta','numero'];
 }

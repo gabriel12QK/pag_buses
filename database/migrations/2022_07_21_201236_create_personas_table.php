@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('ape');
-            $table->string('CI');
+            $table->string('CI')->unique();
             $table->string('telf');
             $table->boolean('estado');
             $table->foreignId('id_tipo')->constrained('tipos');
